@@ -29,8 +29,8 @@ Partial Class Login
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -39,7 +39,7 @@ Partial Class Login
         '
         Me.UsernameLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UsernameLabel.Location = New System.Drawing.Point(329, 293)
+        Me.UsernameLabel.Location = New System.Drawing.Point(377, 287)
         Me.UsernameLabel.Name = "UsernameLabel"
         Me.UsernameLabel.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.UsernameLabel.Size = New System.Drawing.Size(285, 29)
@@ -50,7 +50,7 @@ Partial Class Login
         '
         Me.PasswordLabel.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PasswordLabel.Location = New System.Drawing.Point(329, 379)
+        Me.PasswordLabel.Location = New System.Drawing.Point(377, 373)
         Me.PasswordLabel.Name = "PasswordLabel"
         Me.PasswordLabel.Size = New System.Drawing.Size(285, 29)
         Me.PasswordLabel.TabIndex = 3
@@ -61,7 +61,7 @@ Partial Class Login
         '
         Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(334, 325)
+        Me.TextBox1.Location = New System.Drawing.Point(382, 319)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.TextBox1.Size = New System.Drawing.Size(383, 30)
@@ -71,7 +71,7 @@ Partial Class Login
         '
         Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(334, 412)
+        Me.TextBox2.Location = New System.Drawing.Point(382, 406)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(383, 30)
@@ -80,7 +80,7 @@ Partial Class Login
         'btnLogin
         '
         Me.btnLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLogin.Location = New System.Drawing.Point(866, 497)
+        Me.btnLogin.Location = New System.Drawing.Point(966, 517)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(122, 46)
         Me.btnLogin.TabIndex = 6
@@ -91,7 +91,7 @@ Partial Class Login
         '
         Me.btnReset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnReset.Location = New System.Drawing.Point(728, 497)
+        Me.btnReset.Location = New System.Drawing.Point(828, 517)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(122, 46)
         Me.btnReset.TabIndex = 7
@@ -114,20 +114,9 @@ Partial Class Login
         Me.GroupBox1.Controls.Add(Me.UsernameLabel)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1058, 579)
+        Me.GroupBox1.Size = New System.Drawing.Size(1158, 599)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PictureBox1.Image = Global.FinalPorject.My.Resources.Resources.image_removebg_preview
-        Me.PictureBox1.Location = New System.Drawing.Point(422, 76)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(178, 160)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 8
-        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -135,19 +124,30 @@ Partial Class Login
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label1.Location = New System.Drawing.Point(404, 44)
+        Me.Label1.Location = New System.Drawing.Point(416, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(221, 29)
+        Me.Label1.Size = New System.Drawing.Size(321, 29)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "NAMA APLIKASI"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PictureBox1.Image = Global.FinalPorject.My.Resources.Resources.image_removebg_preview
+        Me.PictureBox1.Location = New System.Drawing.Point(484, 96)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(178, 160)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CadetBlue
-        Me.ClientSize = New System.Drawing.Size(1082, 603)
+        Me.ClientSize = New System.Drawing.Size(1182, 623)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
