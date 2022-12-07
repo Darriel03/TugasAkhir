@@ -41,12 +41,14 @@ Partial Class Produk
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnSimpan = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.btnSimpan = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -89,9 +91,9 @@ Partial Class Produk
         Me.Panel2.Controls.Add(Me.PictureBox13)
         Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(296, 605)
+        Me.Panel2.Size = New System.Drawing.Size(298, 625)
         Me.Panel2.TabIndex = 1
         '
         'PictureBox12
@@ -236,7 +238,7 @@ Partial Class Produk
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.FinalPorject.My.Resources.Resources.logout__1_
-        Me.PictureBox13.Location = New System.Drawing.Point(12, 551)
+        Me.PictureBox13.Location = New System.Drawing.Point(12, 576)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(52, 47)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -247,7 +249,7 @@ Partial Class Produk
         '
         Me.Button4.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button4.Location = New System.Drawing.Point(-6, 544)
+        Me.Button4.Location = New System.Drawing.Point(-6, 569)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(305, 61)
         Me.Button4.TabIndex = 5
@@ -263,55 +265,47 @@ Partial Class Produk
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Location = New System.Drawing.Point(291, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(816, 603)
+        Me.Panel1.Size = New System.Drawing.Size(889, 626)
         Me.Panel1.TabIndex = 2
         '
         'GroupBox2
         '
         Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Location = New System.Drawing.Point(14, 232)
+        Me.GroupBox2.Controls.Add(Me.btnSimpan)
+        Me.GroupBox2.Controls.Add(Me.Button5)
+        Me.GroupBox2.Controls.Add(Me.Button6)
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 252)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(792, 355)
+        Me.GroupBox2.Size = New System.Drawing.Size(868, 359)
         Me.GroupBox2.TabIndex = 29
         Me.GroupBox2.TabStop = False
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 21)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 14)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(780, 328)
+        Me.DataGridView1.Size = New System.Drawing.Size(657, 338)
         Me.DataGridView1.TabIndex = 0
         '
-        'GroupBox1
+        'btnSimpan
         '
-        Me.GroupBox1.Controls.Add(Me.Button5)
-        Me.GroupBox1.Controls.Add(Me.Button6)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.btnSimpan)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Font = New System.Drawing.Font("Constantia", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(11, 6)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(795, 220)
-        Me.GroupBox1.TabIndex = 28
-        Me.GroupBox1.TabStop = False
+        Me.btnSimpan.Font = New System.Drawing.Font("Constantia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSimpan.Location = New System.Drawing.Point(667, 14)
+        Me.btnSimpan.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSimpan.Name = "btnSimpan"
+        Me.btnSimpan.Size = New System.Drawing.Size(104, 39)
+        Me.btnSimpan.TabIndex = 22
+        Me.btnSimpan.Text = "SIMPAN"
+        Me.btnSimpan.UseVisualStyleBackColor = True
         '
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Constantia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(674, 165)
+        Me.Button5.Location = New System.Drawing.Point(667, 108)
         Me.Button5.Margin = New System.Windows.Forms.Padding(4)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(104, 39)
@@ -322,7 +316,7 @@ Partial Class Produk
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("Constantia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(562, 165)
+        Me.Button6.Location = New System.Drawing.Point(667, 61)
         Me.Button6.Margin = New System.Windows.Forms.Padding(4)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(104, 39)
@@ -330,40 +324,70 @@ Partial Class Produk
         Me.Button6.Text = "UBAH"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.TextBox5)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Font = New System.Drawing.Font("Constantia", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(868, 249)
+        Me.GroupBox1.TabIndex = 28
+        Me.GroupBox1.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(175, 205)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(189, 30)
+        Me.TextBox1.TabIndex = 29
+        '
         'ComboBox1
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(175, 59)
+        Me.ComboBox1.Location = New System.Drawing.Point(175, 55)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(159, 32)
+        Me.ComboBox1.Size = New System.Drawing.Size(225, 32)
         Me.ComboBox1.TabIndex = 27
-        '
-        'btnSimpan
-        '
-        Me.btnSimpan.Font = New System.Drawing.Font("Constantia", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSimpan.Location = New System.Drawing.Point(450, 165)
-        Me.btnSimpan.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnSimpan.Name = "btnSimpan"
-        Me.btnSimpan.Size = New System.Drawing.Size(104, 39)
-        Me.btnSimpan.TabIndex = 22
-        Me.btnSimpan.Text = "SIMPAN"
-        Me.btnSimpan.UseVisualStyleBackColor = True
         '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(175, 22)
+        Me.TextBox5.Location = New System.Drawing.Point(175, 18)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(159, 30)
+        Me.TextBox5.Size = New System.Drawing.Size(225, 30)
         Me.TextBox5.TabIndex = 26
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(12, 209)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(102, 24)
+        Me.Label8.TabIndex = 28
+        Me.Label8.Text = "Harga Jual"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(13, 98)
+        Me.Label7.Location = New System.Drawing.Point(11, 97)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(129, 24)
@@ -374,7 +398,7 @@ Partial Class Produk
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(13, 22)
+        Me.Label5.Location = New System.Drawing.Point(11, 22)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(122, 24)
@@ -385,7 +409,7 @@ Partial Class Produk
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(13, 60)
+        Me.Label6.Location = New System.Drawing.Point(11, 59)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(85, 24)
@@ -396,7 +420,7 @@ Partial Class Produk
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 136)
+        Me.Label2.Location = New System.Drawing.Point(11, 136)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 24)
@@ -407,48 +431,45 @@ Partial Class Produk
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(16, 173)
+        Me.Label4.Location = New System.Drawing.Point(11, 171)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 24)
+        Me.Label4.Size = New System.Drawing.Size(103, 24)
         Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Harga"
+        Me.Label4.Text = "Harga Beli"
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(175, 98)
+        Me.TextBox2.Location = New System.Drawing.Point(175, 94)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(271, 30)
+        Me.TextBox2.Size = New System.Drawing.Size(312, 30)
         Me.TextBox2.TabIndex = 19
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(175, 174)
+        Me.TextBox4.Location = New System.Drawing.Point(175, 167)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(159, 30)
+        Me.TextBox4.Size = New System.Drawing.Size(189, 30)
         Me.TextBox4.TabIndex = 21
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(175, 136)
+        Me.TextBox3.Location = New System.Drawing.Point(175, 130)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(192, 30)
+        Me.TextBox3.Size = New System.Drawing.Size(225, 30)
         Me.TextBox3.TabIndex = 20
-        '
-        'BackgroundWorker1
-        '
         '
         'Produk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1109, 600)
+        Me.ClientSize = New System.Drawing.Size(1182, 623)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "Produk"
@@ -505,4 +526,6 @@ Partial Class Produk
     Friend WithEvents Btn As Button
     Friend WithEvents Button17 As Button
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label8 As Label
 End Class

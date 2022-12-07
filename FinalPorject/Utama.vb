@@ -3,12 +3,19 @@
         Produk.Show()
         Me.Hide()
     End Sub
+
     Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
         Transaksi.Show()
         Me.Hide()
     End Sub
+
     Private Sub btnStok_Click(sender As Object, e As EventArgs) Handles btnStok.Click
         stokBarang.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        laporan.Show()
         Me.Hide()
     End Sub
 
