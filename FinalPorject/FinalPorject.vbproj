@@ -48,6 +48,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -79,12 +80,24 @@
     <Compile Include="Data Produk.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="db_pemdesktblkategoridataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_pemdesktblkategoridataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FTambahKategori.Designer.vb">
+      <DependentUpon>FTambahKategori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FTambahKategori.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Laporan.Designer.vb">
       <DependentUpon>Laporan.vb</DependentUpon>
     </Compile>
     <Compile Include="Laporan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MdlKoneksi.vb" />
     <Compile Include="Stok Barang.Designer.vb">
       <DependentUpon>Stok Barang.vb</DependentUpon>
     </Compile>
@@ -153,6 +166,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="db_pemdesktblkategoridataset.xsc">
+      <DependentUpon>db_pemdesktblkategoridataset.xsd</DependentUpon>
+    </None>
+    <None Include="db_pemdesktblkategoridataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_pemdesktblkategoridataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_pemdesktblkategoridataset.xss">
+      <DependentUpon>db_pemdesktblkategoridataset.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
