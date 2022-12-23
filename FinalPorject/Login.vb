@@ -1,4 +1,5 @@
-﻿Public Class Login
+﻿Imports MySql.Data.MySqlClient
+Public Class Login
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String
         Dim password As String
