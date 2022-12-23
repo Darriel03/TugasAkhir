@@ -92,36 +92,45 @@ Public Class stokBarang
         If tbNoFakturPmb.Text = "" Then
             MsgBox("Nomor Pembelian Belum di isi !! ", MsgBoxStyle.Exclamation, "Peringatan")
         Else
-            Dim simpan1, simpan, ubah As String
+            Dim simpan1, simpan As String
             Call koneksi()
             simpan = "INSERT INTO tblstok (idstok,tglpembelian,grandtotal) VALUES (@p1,@p2,@p3)"
             simpan1 = "INSERT INTO tblstokdetail (idstok,kodebarang,qtystok,stokdhrgbeli,stokdhrgjual,totalhrgbeli) VALUES (@p4,@p5,@p6,@p7,@p8,@p9) "
-            ubah = "UPDATE barang SET jumlah=@p9 WHERE kodebrg = @p10"
+
+            cmd = conn.CreateCommand
+            With cmd
+                .CommandText = simpan
+                .Connection = conn
+                .Parameters.Add("p1", MySqlDbType.VarChar, 20).Value = tbNoFakturPmb.Text
+                .Parameters.Add("p2", MySqlDbType.DateTime).Value = datePicker1.Value
+                .Parameters.Add("p3", MySqlDbType.Int32).Value = Convert.ToInt32(tbGrandTotal.Text)
+                .ExecuteNonQuery()
+            End With
             For i As Integer = 0 To DataGridView1.Rows.Count - 2
-                cmd = conn.CreateCommand
-                With cmd
-                    .CommandText = simpan
-                    .Connection = conn
-                    .Parameters.Add("p1", MySqlDbType.String, 10).Value = tbNoFakturPmb.Text
-                    .Parameters.Add("p2", MySqlDbType.String, 20).Value = datePicker1.Text
-                    .ExecuteNonQuery()
-                End With
-
 
                 cmd = conn.CreateCommand
                 With cmd
-                    .CommandText = ubah
+                    .CommandText = simpan1
                     .Connection = conn
-                    .Parameters.Add("p9", MySqlDbType.UInt32).Value =
-                    DataGridView1.Rows(i).Cells(5).Value
-                    .Parameters.Add("p10", MySqlDbType.String).Value =
-                    DataGridView1.Rows(i).Cells(0).Value
+                    .Parameters.Add("p4", MySqlDbType.VarChar, 20).Value = tbNoFakturPmb.Text
+                    .Parameters.Add("p5", MySqlDbType.VarChar, 20).Value = DataGridView1.Rows(i).Cells(0).Value
+                    .Parameters.Add("p6", MySqlDbType.Int32).Value = DataGridView1.Rows(i).Cells(4).Value
+                    .Parameters.Add("p7", MySqlDbType.Int32).Value = DataGridView1.Rows(i).Cells(3).Value
+                    .Parameters.Add("p8", MySqlDbType.Int32).Value = DataGridView1.Rows(i).Cells(5).Value
+                    .Parameters.Add("p9", MySqlDbType.Int32).Value = DataGridView1.Rows(i).Cells(6).Value
                     .ExecuteNonQuery()
                 End With
             Next
+            conn.Close()
+            cmd.Dispose()
+            For Each row As DataGridViewRow In dgvListBarang.Rows
+                Dim ischecked As Boolean = Convert.ToBoolean(row.Cells(0).Value)
+                If ischecked Then
+                    row.Cells(0).Value = False
+                End If
+            Next
+            Call hitungItem()
+            Call hitungTotal()
         End If
-        conn.Close()
-        cmd.Dispose()
-        DataGridView1.Rows.Clear()
     End Sub
 End Class
