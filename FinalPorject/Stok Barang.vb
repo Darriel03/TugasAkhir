@@ -133,4 +133,12 @@ Public Class stokBarang
             Call hitungTotal()
         End If
     End Sub
+
+    Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
+        Utama.Show()
+        Me.Hide()
+    End Sub
+    Private Sub btnProduk_Click(sender As Object, e As EventArgs) Handles btnProduk.Click
+        btnProduk.Enabled = False
+    End Sub
 End Class

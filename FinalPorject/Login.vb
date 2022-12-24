@@ -27,6 +27,6 @@ Public Class Login
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         TextBox1.Text = ""
         TextBox2.Text = ""
-        'anjay'
     End Sub
+
 End Class
