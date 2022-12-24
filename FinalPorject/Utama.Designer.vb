@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Utama
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Utama
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -59,9 +59,10 @@ Partial Class Utama
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Location = New System.Drawing.Point(296, 0)
+        Me.Panel1.Location = New System.Drawing.Point(222, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(799, 627)
+        Me.Panel1.Size = New System.Drawing.Size(599, 509)
         Me.Panel1.TabIndex = 1
         '
         'GroupBox1
@@ -70,9 +71,11 @@ Partial Class Utama
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(10, 5)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 608)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(582, 494)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
         '
@@ -80,9 +83,10 @@ Partial Class Utama
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Constantia", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 18)
+        Me.Label2.Location = New System.Drawing.Point(4, 15)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(170, 37)
+        Me.Label2.Size = New System.Drawing.Size(139, 29)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Profile Toko"
         '
@@ -108,16 +112,18 @@ Partial Class Utama
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(298, 625)
+        Me.Panel2.Size = New System.Drawing.Size(224, 508)
         Me.Panel2.TabIndex = 0
         '
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.FinalPorject.My.Resources.Resources.home__1_
-        Me.PictureBox12.Location = New System.Drawing.Point(19, 166)
+        Me.PictureBox12.Location = New System.Drawing.Point(14, 135)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox12.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox12.TabIndex = 80
         Me.PictureBox12.TabStop = False
@@ -125,9 +131,10 @@ Partial Class Utama
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.FinalPorject.My.Resources.Resources.gadgets
-        Me.PictureBox8.Location = New System.Drawing.Point(17, 220)
+        Me.PictureBox8.Location = New System.Drawing.Point(13, 179)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox8.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox8.TabIndex = 76
         Me.PictureBox8.TabStop = False
@@ -135,9 +142,10 @@ Partial Class Utama
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.FinalPorject.My.Resources.Resources.trolley
-        Me.PictureBox10.Location = New System.Drawing.Point(19, 333)
+        Me.PictureBox10.Location = New System.Drawing.Point(14, 271)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox10.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox10.TabIndex = 78
         Me.PictureBox10.TabStop = False
@@ -145,9 +153,10 @@ Partial Class Utama
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.FinalPorject.My.Resources.Resources.cash_flow
-        Me.PictureBox11.Location = New System.Drawing.Point(18, 391)
+        Me.PictureBox11.Location = New System.Drawing.Point(14, 318)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox11.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox11.TabIndex = 79
         Me.PictureBox11.TabStop = False
@@ -155,9 +164,10 @@ Partial Class Utama
         'PictureBox9
         '
         Me.PictureBox9.Image = Global.FinalPorject.My.Resources.Resources.pay
-        Me.PictureBox9.Location = New System.Drawing.Point(18, 276)
+        Me.PictureBox9.Location = New System.Drawing.Point(14, 224)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox9.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 77
         Me.PictureBox9.TabStop = False
@@ -166,9 +176,10 @@ Partial Class Utama
         '
         Me.btnLaporan.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLaporan.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnLaporan.Location = New System.Drawing.Point(-5, 384)
+        Me.btnLaporan.Location = New System.Drawing.Point(-4, 312)
+        Me.btnLaporan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnLaporan.Name = "btnLaporan"
-        Me.btnLaporan.Size = New System.Drawing.Size(308, 61)
+        Me.btnLaporan.Size = New System.Drawing.Size(231, 50)
         Me.btnLaporan.TabIndex = 84
         Me.btnLaporan.Text = "Laporan"
         Me.btnLaporan.UseVisualStyleBackColor = False
@@ -177,9 +188,10 @@ Partial Class Utama
         '
         Me.btnStok.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStok.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnStok.Location = New System.Drawing.Point(-5, 327)
+        Me.btnStok.Location = New System.Drawing.Point(-4, 266)
+        Me.btnStok.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnStok.Name = "btnStok"
-        Me.btnStok.Size = New System.Drawing.Size(308, 61)
+        Me.btnStok.Size = New System.Drawing.Size(231, 50)
         Me.btnStok.TabIndex = 82
         Me.btnStok.Text = "Stok Barang"
         Me.btnStok.UseVisualStyleBackColor = False
@@ -188,9 +200,10 @@ Partial Class Utama
         '
         Me.btnTransaksi.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTransaksi.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnTransaksi.Location = New System.Drawing.Point(-5, 271)
+        Me.btnTransaksi.Location = New System.Drawing.Point(-4, 220)
+        Me.btnTransaksi.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnTransaksi.Name = "btnTransaksi"
-        Me.btnTransaksi.Size = New System.Drawing.Size(308, 61)
+        Me.btnTransaksi.Size = New System.Drawing.Size(231, 50)
         Me.btnTransaksi.TabIndex = 83
         Me.btnTransaksi.Text = " Transaksi"
         Me.btnTransaksi.UseVisualStyleBackColor = False
@@ -199,9 +212,10 @@ Partial Class Utama
         '
         Me.btnProduk.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnProduk.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnProduk.Location = New System.Drawing.Point(-5, 215)
+        Me.btnProduk.Location = New System.Drawing.Point(-4, 175)
+        Me.btnProduk.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnProduk.Name = "btnProduk"
-        Me.btnProduk.Size = New System.Drawing.Size(308, 62)
+        Me.btnProduk.Size = New System.Drawing.Size(231, 50)
         Me.btnProduk.TabIndex = 81
         Me.btnProduk.Text = "Data Produk"
         Me.btnProduk.UseVisualStyleBackColor = False
@@ -210,9 +224,10 @@ Partial Class Utama
         '
         Me.btnUtama.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUtama.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnUtama.Location = New System.Drawing.Point(-5, 159)
+        Me.btnUtama.Location = New System.Drawing.Point(-4, 129)
+        Me.btnUtama.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnUtama.Name = "btnUtama"
-        Me.btnUtama.Size = New System.Drawing.Size(308, 62)
+        Me.btnUtama.Size = New System.Drawing.Size(231, 50)
         Me.btnUtama.TabIndex = 85
         Me.btnUtama.Text = "Menu Utama"
         Me.btnUtama.UseVisualStyleBackColor = False
@@ -221,9 +236,10 @@ Partial Class Utama
         '
         Me.PictureBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.PictureBox13.Image = Global.FinalPorject.My.Resources.Resources.logout__1_
-        Me.PictureBox13.Location = New System.Drawing.Point(9, 573)
+        Me.PictureBox13.Location = New System.Drawing.Point(7, 466)
+        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(58, 47)
+        Me.PictureBox13.Size = New System.Drawing.Size(44, 38)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox13.TabIndex = 67
         Me.PictureBox13.TabStop = False
@@ -233,9 +249,10 @@ Partial Class Utama
         Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnLogout.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnLogout.Location = New System.Drawing.Point(-9, 566)
+        Me.btnLogout.Location = New System.Drawing.Point(-7, 460)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(311, 61)
+        Me.btnLogout.Size = New System.Drawing.Size(233, 50)
         Me.btnLogout.TabIndex = 66
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = False
@@ -245,9 +262,10 @@ Partial Class Utama
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(124, 47)
+        Me.Label3.Location = New System.Drawing.Point(93, 38)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 24)
+        Me.Label3.Size = New System.Drawing.Size(41, 19)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "User"
         '
@@ -256,9 +274,10 @@ Partial Class Utama
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(123, 15)
+        Me.Label1.Location = New System.Drawing.Point(92, 12)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 24)
+        Me.Label1.Size = New System.Drawing.Size(125, 19)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Selamat Datang,"
         '
@@ -267,21 +286,23 @@ Partial Class Utama
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = Global.FinalPorject.My.Resources.Resources._60111
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 13)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 11)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(105, 105)
+        Me.PictureBox1.Size = New System.Drawing.Size(80, 86)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'Utama
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1092, 623)
+        Me.ClientSize = New System.Drawing.Size(819, 506)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Utama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
