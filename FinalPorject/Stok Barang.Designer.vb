@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class stokBarang
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class stokBarang
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
@@ -40,12 +40,12 @@ Partial Class stokBarang
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.tbGrandTotal = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.tbJumlahItem = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnSimpanPemb = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbCari = New System.Windows.Forms.TextBox()
@@ -54,13 +54,6 @@ Partial Class stokBarang
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.datePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.tbGrandTotal = New System.Windows.Forms.TextBox()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -294,7 +287,6 @@ Partial Class stokBarang
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
         Me.GroupBox2.Controls.Add(Me.btnSimpanPemb)
-        Me.GroupBox2.Controls.Add(Me.Button7)
         Me.GroupBox2.Location = New System.Drawing.Point(8, 220)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
@@ -302,6 +294,15 @@ Partial Class stokBarang
         Me.GroupBox2.Size = New System.Drawing.Size(656, 276)
         Me.GroupBox2.TabIndex = 66
         Me.GroupBox2.TabStop = False
+        '
+        'tbGrandTotal
+        '
+        Me.tbGrandTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbGrandTotal.Location = New System.Drawing.Point(481, 101)
+        Me.tbGrandTotal.Name = "tbGrandTotal"
+        Me.tbGrandTotal.Size = New System.Drawing.Size(174, 38)
+        Me.tbGrandTotal.TabIndex = 74
+        Me.tbGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label5
         '
@@ -334,7 +335,6 @@ Partial Class stokBarang
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column6, Me.Column5})
         Me.DataGridView1.Location = New System.Drawing.Point(11, 12)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
@@ -353,17 +353,6 @@ Partial Class stokBarang
         Me.btnSimpanPemb.TabIndex = 65
         Me.btnSimpanPemb.Text = "Simpan"
         Me.btnSimpanPemb.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(568, 230)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(72, 32)
-        Me.Button7.TabIndex = 66
-        Me.Button7.Text = "Hapus"
-        Me.Button7.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -448,45 +437,6 @@ Partial Class stokBarang
         Me.datePicker1.Size = New System.Drawing.Size(191, 26)
         Me.datePicker1.TabIndex = 40
         '
-        'tbGrandTotal
-        '
-        Me.tbGrandTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbGrandTotal.Location = New System.Drawing.Point(481, 101)
-        Me.tbGrandTotal.Name = "tbGrandTotal"
-        Me.tbGrandTotal.Size = New System.Drawing.Size(174, 38)
-        Me.tbGrandTotal.TabIndex = 74
-        Me.tbGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Kode Barang"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nama Barang"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Harga Beli"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Jumlah Beli"
-        Me.Column4.Name = "Column4"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Harga Jual"
-        Me.Column6.Name = "Column6"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Subtotal"
-        Me.Column5.Name = "Column5"
-        '
         'stokBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -540,7 +490,6 @@ Partial Class stokBarang
     Friend WithEvents Label6 As Label
     Friend WithEvents datePicker1 As DateTimePicker
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button7 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnSimpanPemb As Button
     Friend WithEvents dgvListBarang As DataGridView
@@ -550,10 +499,4 @@ Partial Class stokBarang
     Friend WithEvents Label5 As Label
     Friend WithEvents tbJumlahItem As TextBox
     Friend WithEvents tbGrandTotal As TextBox
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class
