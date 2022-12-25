@@ -130,7 +130,7 @@ SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) 
         dt2.Columns.Add("Jumlah")
         dt2.Columns.Add("Stok Akhir")
         dt2.Columns.Add("Subtotal")
-        For Each row As DataGridViewRow In dgvListBarang.Rows
+        For Each row As DataGridViewRow InListBarang.Rows
             Dim ischecked As Boolean = Convert.ToBoolean(row.Cells(0).Value)
             If ischecked Then
                 dt2.Rows.Add(row.Cells(1).Value, row.Cells(2).Value, row.Cells(3).Value, row.Cells(4).Value, row.Cells(5).Value, 0, row.Cells(5).Value, 0)

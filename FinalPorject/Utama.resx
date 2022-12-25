@@ -117,4 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Showroom &amp; Offline Store :
+
+RETINA DIGICAM
+Camera shop ‘n accesories
+
+Open : Monday – Sunday
+Jam : 09.00 – 21.00
+Alamat : Jl.Penjaringan Asri XVII No. 19, PS I-E 29
+Telp : +6231-87862493
+HP : +6282111160035
+Website : www.retinadigicam.com</value>
+  </data>
 </root>

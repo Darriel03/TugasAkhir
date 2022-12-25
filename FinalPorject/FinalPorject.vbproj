@@ -141,6 +141,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FTambahKategori.resx">
+      <DependentUpon>FTambahKategori.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Laporan.resx">
       <DependentUpon>Laporan.vb</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +227,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retinadigicam-19122022-0002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_20221219-180114_Chrome.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_20221219-175705_Maps.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

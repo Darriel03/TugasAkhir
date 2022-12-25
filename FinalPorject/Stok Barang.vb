@@ -1,5 +1,23 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class stokBarang
+    Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
+        Utama.Show()
+        Me.Hide()
+    End Sub
+    Private Sub btnProduk_Click(sender As Object, e As EventArgs) Handles btnProduk.Click
+        btnProduk.Enabled = False
+    End Sub
+    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
+        Transaksi.Show()
+        Me.Hide()
+    End Sub
+    Private Sub btnStok_Click(sender As Object, e As EventArgs) Handles btnStok.Click
+        btnStok.Enabled = False
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        Laporan.Show()
+        Me.Hide()
     Private Sub tampilBrg()
         Call koneksi()
         adr = New MySqlDataAdapter("SELECT kodebarang, namabarang, merekbarang, k.namakategori, hargajual, hargabeli FROM tblbarang b INNER JOIN tblkategori k ON b.idkategori = k.idkategori", conn)
@@ -154,7 +172,6 @@ Public Class stokBarang
 
         End If
     End Sub
-
     Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
         If Asc(e.KeyChar) <> 8 Then
             If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
