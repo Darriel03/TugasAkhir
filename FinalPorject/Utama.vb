@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
-        laporan.Show()
+        Laporan.Show()
         Me.Hide()
     End Sub
 

@@ -23,8 +23,10 @@ Partial Class laporan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(laporan))
         Me.TabControl2 = New System.Windows.Forms.TabControl()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPagePenjualan = New System.Windows.Forms.TabPage()
+        Me.btnPrint = New System.Windows.Forms.Button()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -32,7 +34,8 @@ Partial Class laporan
         Me.idtransaksi = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tglpenjualan = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grandtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabPagePembelian = New System.Windows.Forms.TabPage()
+        Me.btnPrintPembelian = New System.Windows.Forms.Button()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -52,13 +55,15 @@ Partial Class laporan
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.btnProduk = New System.Windows.Forms.Button()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.TabControl2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
+        Me.TabPagePenjualan.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage4.SuspendLayout()
+        Me.TabPagePembelian.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Db_pemdesktblkategoridataset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DbpemdesktblkategoridatasetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,8 +79,8 @@ Partial Class laporan
         '
         'TabControl2
         '
-        Me.TabControl2.Controls.Add(Me.TabPage3)
-        Me.TabControl2.Controls.Add(Me.TabPage4)
+        Me.TabControl2.Controls.Add(Me.TabPagePenjualan)
+        Me.TabControl2.Controls.Add(Me.TabPagePembelian)
         Me.TabControl2.Location = New System.Drawing.Point(306, 0)
         Me.TabControl2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TabControl2.Name = "TabControl2"
@@ -83,20 +88,31 @@ Partial Class laporan
         Me.TabControl2.Size = New System.Drawing.Size(905, 657)
         Me.TabControl2.TabIndex = 63
         '
-        'TabPage3
+        'TabPagePenjualan
         '
-        Me.TabPage3.Controls.Add(Me.DateTimePicker3)
-        Me.TabPage3.Controls.Add(Me.Button5)
-        Me.TabPage3.Controls.Add(Me.DateTimePicker1)
-        Me.TabPage3.Controls.Add(Me.DataGridView1)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPage3.Size = New System.Drawing.Size(897, 628)
-        Me.TabPage3.TabIndex = 0
-        Me.TabPage3.Text = "Laporan Penjualan"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabPagePenjualan.Controls.Add(Me.btnPrint)
+        Me.TabPagePenjualan.Controls.Add(Me.DateTimePicker3)
+        Me.TabPagePenjualan.Controls.Add(Me.Button5)
+        Me.TabPagePenjualan.Controls.Add(Me.DateTimePicker1)
+        Me.TabPagePenjualan.Controls.Add(Me.DataGridView1)
+        Me.TabPagePenjualan.Location = New System.Drawing.Point(4, 25)
+        Me.TabPagePenjualan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPagePenjualan.Name = "TabPagePenjualan"
+        Me.TabPagePenjualan.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPagePenjualan.Size = New System.Drawing.Size(897, 628)
+        Me.TabPagePenjualan.TabIndex = 0
+        Me.TabPagePenjualan.Text = "Laporan Penjualan"
+        Me.TabPagePenjualan.UseVisualStyleBackColor = True
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.Location = New System.Drawing.Point(790, 23)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(91, 31)
+        Me.btnPrint.TabIndex = 63
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
         '
         'DateTimePicker3
         '
@@ -164,20 +180,31 @@ Partial Class laporan
         Me.grandtotal.Name = "grandtotal"
         Me.grandtotal.Width = 250
         '
-        'TabPage4
+        'TabPagePembelian
         '
-        Me.TabPage4.Controls.Add(Me.DateTimePicker4)
-        Me.TabPage4.Controls.Add(Me.Button6)
-        Me.TabPage4.Controls.Add(Me.DateTimePicker2)
-        Me.TabPage4.Controls.Add(Me.DataGridView2)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.TabPage4.Size = New System.Drawing.Size(897, 628)
-        Me.TabPage4.TabIndex = 1
-        Me.TabPage4.Text = "Laporan Pembelian"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.TabPagePembelian.Controls.Add(Me.btnPrintPembelian)
+        Me.TabPagePembelian.Controls.Add(Me.DateTimePicker4)
+        Me.TabPagePembelian.Controls.Add(Me.Button6)
+        Me.TabPagePembelian.Controls.Add(Me.DateTimePicker2)
+        Me.TabPagePembelian.Controls.Add(Me.DataGridView2)
+        Me.TabPagePembelian.Location = New System.Drawing.Point(4, 25)
+        Me.TabPagePembelian.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPagePembelian.Name = "TabPagePembelian"
+        Me.TabPagePembelian.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TabPagePembelian.Size = New System.Drawing.Size(897, 628)
+        Me.TabPagePembelian.TabIndex = 1
+        Me.TabPagePembelian.Text = "Laporan Pembelian"
+        Me.TabPagePembelian.UseVisualStyleBackColor = True
+        '
+        'btnPrintPembelian
+        '
+        Me.btnPrintPembelian.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrintPembelian.Location = New System.Drawing.Point(785, 21)
+        Me.btnPrintPembelian.Name = "btnPrintPembelian"
+        Me.btnPrintPembelian.Size = New System.Drawing.Size(98, 32)
+        Me.btnPrintPembelian.TabIndex = 66
+        Me.btnPrintPembelian.Text = "Print"
+        Me.btnPrintPembelian.UseVisualStyleBackColor = True
         '
         'DateTimePicker4
         '
@@ -252,7 +279,7 @@ Partial Class laporan
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.btnLogout)
         Me.Panel2.Controls.Add(Me.PictureBox8)
         Me.Panel2.Controls.Add(Me.btnProduk)
         Me.Panel2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -401,17 +428,17 @@ Partial Class laporan
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'btnLogout
         '
-        Me.Button1.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button1.Location = New System.Drawing.Point(-6, 595)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(323, 62)
-        Me.Button1.TabIndex = 86
-        Me.Button1.Text = "Logout"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnLogout.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnLogout.Location = New System.Drawing.Point(-6, 595)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(323, 62)
+        Me.btnLogout.TabIndex = 86
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'PictureBox8
         '
@@ -436,6 +463,16 @@ Partial Class laporan
         Me.btnProduk.Text = "Data Produk"
         Me.btnProduk.UseVisualStyleBackColor = False
         '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
         'laporan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -447,9 +484,9 @@ Partial Class laporan
         Me.Name = "laporan"
         Me.Text = "Form1"
         Me.TabControl2.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
+        Me.TabPagePenjualan.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage4.ResumeLayout(False)
+        Me.TabPagePembelian.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Db_pemdesktblkategoridataset, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DbpemdesktblkategoridatasetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -466,10 +503,10 @@ Partial Class laporan
 
     End Sub
     Friend WithEvents TabControl2 As TabControl
-    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents TabPagePenjualan As TabPage
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabPagePembelian As TabPage
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents DateTimePicker2 As DateTimePicker
@@ -494,7 +531,11 @@ Partial Class laporan
     Friend WithEvents Label3 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnLogout As Button
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents btnProduk As Button
+    Friend WithEvents btnPrint As Button
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents btnPrintPembelian As Button
 End Class

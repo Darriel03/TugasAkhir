@@ -25,7 +25,7 @@ Public Class laporan
 
     End Sub
 
-    Private Sub TabControl2_Click(sender As Object, e As EventArgs) Handles TabControl2.Click
+    Private Sub TabControl2lick(sender As Object, e As EventArgs) Handles TabControl2.Click
         Call tampillappembeliannow()
     End Sub
 
@@ -33,4 +33,63 @@ Public Class laporan
         Call tampillappembeliandate()
 
     End Sub
+
+    ''syntax print
+    Private bitmap As Bitmap
+    Private Sub iPrintPenjualan()
+        Dim height As Integer = DataGridView1.Height
+        DataGridView1.Height = DataGridView1.RowCount * DataGridView1.RowTemplate.Height
+        bitmap = New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
+        DataGridView1.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
+        PrintPreviewDialog1.ShowDialog()
+        DataGridView1.Height = height
+    End Sub
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        iPrintPenjualan()
+    End Sub
+    Private Sub iPrintPembeliann()
+        Dim height As Integer = DataGridView2.Height
+        DataGridView2.Height = DataGridView2.RowCount * DataGridView2.RowTemplate.Height
+        bitmap = New Bitmap(Me.DataGridView2.Width, Me.DataGridView2.Height)
+        DataGridView2.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView2.Height))
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
+        PrintPreviewDialog1.ShowDialog()
+        DataGridView1.Height = height
+    End Sub
+    Private Sub btnPrintPembelian_Click(sender As Object, e As EventArgs) Handles btnPrintPembelian.Click
+        iPrintPembeliann()
+    End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs)
+        Dim result As Integer = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
+        Utama.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnProduk_Click(sender As Object, e As EventArgs) Handles btnProduk.Click
+        Produk.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
+        Transaksi.Show()
+        Me.Hide()
+    End Sub
+    Private Sub btnStok_Click(sender As Object, e As EventArgs) Handles btnStok.Click
+        stokBarang.Show()
+        Me.Hide()
+    End Sub
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        btnLaporan.Enabled = False
+    End Sub
+
 End Class
