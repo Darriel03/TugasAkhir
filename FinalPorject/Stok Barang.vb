@@ -18,6 +18,8 @@ Public Class stokBarang
     Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
         Laporan.Show()
         Me.Hide()
+    End Sub
+
     Private Sub tampilBrg()
         Call koneksi()
         adr = New MySqlDataAdapter("SELECT kodebarang, namabarang, merekbarang, k.namakategori, hargajual, hargabeli FROM tblbarang b INNER JOIN tblkategori k ON b.idkategori = k.idkategori", conn)
