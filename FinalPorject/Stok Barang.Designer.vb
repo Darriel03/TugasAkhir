@@ -40,6 +40,10 @@ Partial Class stokBarang
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.tbGrandTotal = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.tbJumlahItem = New System.Windows.Forms.TextBox()
@@ -281,6 +285,10 @@ Partial Class stokBarang
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.tbGrandTotal)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.tbJumlahItem)
@@ -295,12 +303,52 @@ Partial Class stokBarang
         Me.GroupBox2.TabIndex = 66
         Me.GroupBox2.TabStop = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(480, 169)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(69, 19)
+        Me.Label9.TabIndex = 78
+        Me.Label9.Text = "Kembali"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(480, 118)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(49, 19)
+        Me.Label8.TabIndex = 77
+        Me.Label8.Text = "Bayar"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(482, 191)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(174, 26)
+        Me.TextBox2.TabIndex = 76
+        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(482, 140)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(174, 26)
+        Me.TextBox1.TabIndex = 75
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'tbGrandTotal
         '
-        Me.tbGrandTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbGrandTotal.Location = New System.Drawing.Point(481, 101)
+        Me.tbGrandTotal.Enabled = False
+        Me.tbGrandTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbGrandTotal.Location = New System.Drawing.Point(482, 89)
         Me.tbGrandTotal.Name = "tbGrandTotal"
-        Me.tbGrandTotal.Size = New System.Drawing.Size(174, 38)
+        Me.tbGrandTotal.Size = New System.Drawing.Size(174, 26)
         Me.tbGrandTotal.TabIndex = 74
         Me.tbGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -308,14 +356,15 @@ Partial Class stokBarang
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(477, 67)
+        Me.Label5.Location = New System.Drawing.Point(480, 67)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(93, 19)
+        Me.Label5.Size = New System.Drawing.Size(46, 19)
         Me.Label5.TabIndex = 72
-        Me.Label5.Text = "Grand Total"
+        Me.Label5.Text = "Total"
         '
         'tbJumlahItem
         '
+        Me.tbJumlahItem.Enabled = False
         Me.tbJumlahItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbJumlahItem.Location = New System.Drawing.Point(588, 15)
         Me.tbJumlahItem.Name = "tbJumlahItem"
@@ -346,7 +395,7 @@ Partial Class stokBarang
         'btnSimpanPemb
         '
         Me.btnSimpanPemb.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSimpanPemb.Location = New System.Drawing.Point(481, 230)
+        Me.btnSimpanPemb.Location = New System.Drawing.Point(583, 239)
         Me.btnSimpanPemb.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSimpanPemb.Name = "btnSimpanPemb"
         Me.btnSimpanPemb.Size = New System.Drawing.Size(72, 32)
@@ -493,10 +542,14 @@ Partial Class stokBarang
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnSimpanPemb As Button
     Friend WithEvents dgvListBarang As DataGridView
-    Friend WithEvents Label1 As Label
     Friend WithEvents tbCari As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents tbJumlahItem As TextBox
     Friend WithEvents tbGrandTotal As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
