@@ -1,137 +1,212 @@
-﻿Imports System.Drawing.Printing
-Imports System.DateTime
+﻿Imports MySql.Data.MySqlClient
 Public Class Transaksi
-    Dim WithEvents PD As New PrintDocument
-    Dim PPD As New PrintPreviewDialog
-    Dim longpaper As Integer
-
-    Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
-        Utama.Show()
-        Me.Hide()
-    End Sub
-    Private Sub btnProduk_Click(sender As Object, e As EventArgs) Handles btnProduk.Click
-        Produk.Show()
-        Me.Hide()
-    End Sub
-    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
-        btnTransaksi.Enabled = False
-    End Sub
-    Private Sub btnStok_Click(sender As Object, e As EventArgs) Handles btnStok.Click
-        stokBarang.Show()
-        Me.Hide()
-    End Sub
-    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
-        laporan.Show()
-        Me.Hide()
+    Private Sub clear()
+        TextBox1.Text = 0
+        TextBox14.Text = 0
     End Sub
 
-    Sub ubahpjgkertas()
-        Dim rowcount As Integer
-        longpaper = 0
-        rowcount = dgvTransaksi.Rows.Count
-        longpaper = rowcount * 15
-        longpaper = longpaper + 300
-    End Sub
-
-    Private Sub printStruk_Click(sender As Object, e As EventArgs) Handles printStruk.Click
-        ubahpjgkertas()
-        PPD.Document = PD
-        PPD.ShowDialog()
-        'PD.Print() 'Direct Print
-    End Sub
-    Private Sub PD_BeginPrint(sender As Object, e As PrintEventArgs) Handles PD.BeginPrint
-        Dim pagesetup As New PageSettings
-        'pagesetup.PaperSize = New PaperSize("Custom", 300, 500) 'fixed size
-        pagesetup.PaperSize = New PaperSize("Custom", 350, longpaper)
-        PD.DefaultPageSettings = pagesetup
-    End Sub
-    Private Sub PD_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PD.PrintPage
-        Dim f8 As New Font("Times New Roman", 8, FontStyle.Regular)
-        Dim f10 As New Font("Times New Roman", 10, FontStyle.Regular)
-        Dim f10b As New Font("Times New Roman", 10, FontStyle.Bold)
-        Dim f14 As New Font("Times New Roman", 14, FontStyle.Bold)
-
-        Dim leftmargin As Integer = PD.DefaultPageSettings.Margins.Left
-        Dim centermargin As Integer = PD.DefaultPageSettings.PaperSize.Width / 2
-        Dim rightmargin As Integer = PD.DefaultPageSettings.PaperSize.Width
-
-        'font alignment
-        Dim kanan As New StringFormat
-        Dim tengah As New StringFormat
-
-        kanan.Alignment = StringAlignment.Far
-        tengah.Alignment = StringAlignment.Center
-
-        Dim garis As String
-        garis = "............................................................................................."
-
-        'menampilkan datetime
-        Dim waktu As DateTime = DateTime.Now
-        Dim waktuformat As String = waktu.ToString("DD:MM:yy")
-
-
-        e.Graphics.DrawString("RETINA DIGICAM", f14, Brushes.Black, centermargin, 5, tengah)
-        e.Graphics.DrawString("Jl.Penjaringan Asri XVII N0. 19, PS I-E 29M", f10, Brushes.Black, centermargin, 30, tengah)
-        e.Graphics.DrawString("Telp: +6231-87862493 / HP: +6282111160035", f10, Brushes.Black, centermargin, 45, tengah)
-        e.Graphics.DrawString(garis, f10, Brushes.Black, centermargin, 60, tengah)
-        e.Graphics.DrawString("No Faktur" & vbTab & txtFaktur.Text, f10, Brushes.Black, 10, 75)
-        e.Graphics.DrawString("Kasir" & vbTab & vbTab & "10/Andin", f10, Brushes.Black, 10, 90)
-        e.Graphics.DrawString(waktu, f10, Brushes.Black, 10, 110)
-
-        'DetailHeader
-        e.Graphics.DrawString("Qty" & vbTab & "Item" & vbTab & vbTab & "Harga" & vbTab & vbTab & "  Total", f10, Brushes.Black, 10, 130)
-        e.Graphics.DrawString(garis, f10, Brushes.Black, centermargin, 135, tengah)
-
-        Dim tinggi As Integer 'DGV Posisi
-        Dim i As Long
-
-        For baris As Integer = 0 To dgvTransaksi.Rows.Count - 1
-            tinggi += 15
-            e.Graphics.DrawString(dgvTransaksi.Rows(baris).Cells(1).Value.ToString, f10, Brushes.Black, 10, 120 + tinggi)
-            e.Graphics.DrawString(dgvTransaksi.Rows(baris).Cells(0).Value.ToString, f10, Brushes.Black, 25, 120 + tinggi)
-
-            i = dgvTransaksi.Rows(baris).Cells(2).Value
-            dgvTransaksi.Rows(baris).Cells(2).Value = Format(i, "##,##0")
-            e.Graphics.DrawString(dgvTransaksi.Rows(baris).Cells(2).Value.ToString, f10, Brushes.Black, 220, 120 + tinggi)
-
-            'total price
-            Dim total As Long
-            total = Val(dgvTransaksi.Rows(baris).Cells(1).Value * dgvTransaksi.Rows(baris).Cells(2).Value)
-            e.Graphics.DrawString(total.ToString("##,##0"), f8, Brushes.Black, rightmargin, 115 + tinggi, kanan)
-
-        Next
-        Dim tinggi2 As Integer
-        tinggi2 = 145 + tinggi
-
-        hitungharga()
-
-        e.Graphics.DrawString(garis, f10, Brushes.Black, centermargin, tinggi2, tengah)
-        e.Graphics.DrawString("Total" & Format(t_harga, "   ##,##0"), f10b, Brushes.Black, 245, 15 + tinggi2, kanan)
-        e.Graphics.DrawString("Bayar" & Format(t_harga, "   ##,##0"), f10b, Brushes.Black, 245, 30 + tinggi2, kanan)
-        e.Graphics.DrawString("Kembali" & Format(t_harga, "   ##,##0"), f10b, Brushes.Black, 245, 45 + tinggi2, kanan)
-        e.Graphics.DrawString(t_qty & Format(t_qty, "#"), f10b, Brushes.Black, 10, 15 + tinggi2)
-        e.Graphics.DrawString("Thanks for Shopping...", f10, Brushes.Black, centermargin, 100 + tinggi2, tengah)
-        e.Graphics.DrawString(" ~ RETINA DIGICAM ~ ", f10, Brushes.Black, centermargin, 120 + tinggi2, tengah)
-    End Sub
-
-    Dim t_harga As Long
-    Dim t_qty As Long
-    Private Sub hitungharga()
-        Dim hitung As Long = 0
-        For rowitem As Long = 0 To dgvTransaksi.Rows.Count - 1
-            hitung = hitung + Val(dgvTransaksi.Rows(rowitem).Cells(2).Value * dgvTransaksi.Rows(rowitem).Cells(1).Value)
-        Next
-        t_harga = hitung
-        Dim countqty As Long = 0
-        For rowitten As Long = 0 To dgvTransaksi.Rows.Count - 1
-            countqty = countqty + dgvTransaksi.Rows(rowitten).Cells(1).Value
-        Next
-        t_qty = countqty
-    End Sub
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Dim result As Integer = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo)
-        If result = DialogResult.Yes Then
-            Me.Close()
+    Private Sub tampilBrg()
+        Call koneksi()
+        adr = New MySqlDataAdapter("SELECT a.kodebarang, b.namabarang, b.merekbarang, b.hargajual, SUM(a.qtystok) as stok FROM tblstokdetail a 
+JOIN tblbarang b ON a.kodebarang = b.kodebarang WHERE b.kodebarang NOT IN (SELECT kodebarang FROM tbltransaksidetail)
+UNION ALL
+SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) as Stok
+     FROM ( 
+    (SELECT SUM(qtystok) as stok,kodebarang FROM tblstokdetail GROUP BY kodebarang) as stok
+       INNER JOIN 
+    (SELECT SUM(qtypenjualan) as jual,kodebarang FROM tbltransaksidetail GROUP BY kodebarang) as jual 
+     ON stok.kodebarang = jual.kodebarang) JOIN tblbarang b ON stok.kodebarang = b.kodebarang;", conn)
+        adt = New DataSet
+        adr.Fill(adt, "tblstokdetail")
+        dgvListBarang.DataSource = adt.Tables("tblstokdetail")
+        dgvListBarang.AllowUserToAddRows = False
+        Dim checkboxcol As New DataGridViewCheckBoxColumn
+        With checkboxcol
+            .Width = 70
+            .Name = "checkboxcol"
+            .HeaderText = "Pilih Barang"
+        End With
+        dgvListBarang.Columns.Insert(0, checkboxcol)
+        If dgvListBarang(0, 0).Value Is Nothing Then
+            dgvListBarang.Rows.Remove(dgvListBarang.Rows(0))
         End If
+    End Sub
+
+    Sub auto()
+        Call koneksi()
+        cmd = New MySqlCommand("select idtransaksi from tbltransaksi order by idtransaksi desc", conn)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If Not dr.HasRows Then
+            TextBox6.Text = "PJ" + "0001"
+        Else
+            TextBox6.Text = Val(Microsoft.VisualBasic.Mid(dr.Item("idtransaksi").ToString, 4, 3)) + 1
+            If Len(TextBox6.Text) = 1 Then
+                TextBox6.Text = "PJ000" & TextBox6.Text & ""
+            ElseIf Len(TextBox6.Text) = 2 Then
+                TextBox6.Text = "FJ00" & TextBox6.Text & ""
+            ElseIf Len(TextBox6.Text) = 3 Then
+                TextBox6.Text = "FJ0" & TextBox6.Text & ""
+            End If
+        End If
+
+    End Sub
+
+    Sub hitungTotal()
+        Dim cari As Integer = 0
+        For i As Integer = 0 To DataGridView2.Rows.Count - 1
+            cari = cari + DataGridView2.Rows(i).Cells(7).Value
+            TextBox1.Text = cari
+        Next
+    End Sub
+
+    Sub noteditable()
+        DataGridView2.Columns(0).ReadOnly = True
+        DataGridView2.Columns(1).ReadOnly = True
+        DataGridView2.Columns(2).ReadOnly = True
+        DataGridView2.Columns(3).ReadOnly = True
+        DataGridView2.Columns(4).ReadOnly = True
+        DataGridView2.Columns(6).ReadOnly = True
+        DataGridView2.Columns(7).ReadOnly = True
+    End Sub
+
+    Private Sub Transaksi_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Call auto()
+        Call koneksi()
+        Call tampilBrg()
+        Call clear()
+    End Sub
+
+
+
+    Private Sub tbCari_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbCari.TextChanged
+        Call koneksi()
+        cmd = New MySqlCommand("SELECT tblstokdetail.kodebarang, tblbarang.namabarang, tblbarang.merekbarang, tblbarang.hargajual, SUM(qtystok) AS 'STOK' FROM tblstokdetail,tblbarang WHERE tblstokdetail.kodebarang = tblbarang.kodebarang AND tblbarang.namabarang LIKE '%" & tbCari.Text & "%' GROUP BY tblstokdetail.kodebarang", conn)
+        dr = cmd.ExecuteReader
+        dr.Read()
+        If dr.HasRows Then
+            Call koneksi()
+            adr = New MySqlDataAdapter("SELECT tblstokdetail.kodebarang, tblbarang.namabarang, tblbarang.merekbarang, tblbarang.hargajual, SUM(qtystok) AS 'STOK' FROM tblstokdetail,tblbarang WHERE tblstokdetail.kodebarang = tblbarang.kodebarang AND tblbarang.namabarang LIKE '%" & tbCari.Text & "%' GROUP BY tblstokdetail.kodebarang", conn)
+            adt = New DataSet
+            adr.Fill(adt)
+            dgvListBarang.DataSource = adt.Tables(0)
+        Else
+            MsgBox("Data Tidak ditemukan")
+        End If
+    End Sub
+
+    Private Sub DataGridView2_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellEndEdit
+        If e.ColumnIndex = 5 Then
+            DataGridView2.Rows(e.RowIndex).Cells(7).Value =
+                DataGridView2.Rows(e.RowIndex).Cells(3).Value *
+                DataGridView2.Rows(e.RowIndex).Cells(5).Value
+            DataGridView2.Rows(e.RowIndex).Cells(6).Value =
+                DataGridView2.Rows(e.RowIndex).Cells(4).Value -
+                DataGridView2.Rows(e.RowIndex).Cells(5).Value
+        End If
+        Dim min As Integer
+        min = DataGridView2.Rows(e.RowIndex).Cells(4).Value - DataGridView2.Rows(e.RowIndex).Cells(5).Value
+        If min < 0 Then
+            MsgBox("Stok tidak mencukupi")
+            DataGridView2.Rows(e.RowIndex).Cells(5).Value = 0
+            DataGridView2.Rows(e.RowIndex).Cells(7).Value =
+                DataGridView2.Rows(e.RowIndex).Cells(3).Value *
+                DataGridView2.Rows(e.RowIndex).Cells(5).Value
+            DataGridView2.Rows(e.RowIndex).Cells(6).Value =
+                DataGridView2.Rows(e.RowIndex).Cells(4).Value -
+                DataGridView2.Rows(e.RowIndex).Cells(5).Value
+        End If
+        Call hitungTotal()
+
+    End Sub
+
+    Private Sub dgvListBarang_CellValueChanged(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListBarang.CellValueChanged
+        Dim dt2 As New DataTable
+        dt2.Columns.Add("Kode Barang")
+        dt2.Columns.Add("Nama Barang")
+        dt2.Columns.Add("Merek Barang")
+        dt2.Columns.Add("Harga")
+        dt2.Columns.Add("Stok Awal")
+        dt2.Columns.Add("Jumlah")
+        dt2.Columns.Add("Stok Akhir")
+        dt2.Columns.Add("Subtotal")
+        For Each row As DataGridViewRow InListBarang.Rows
+            Dim ischecked As Boolean = Convert.ToBoolean(row.Cells(0).Value)
+            If ischecked Then
+                dt2.Rows.Add(row.Cells(1).Value, row.Cells(2).Value, row.Cells(3).Value, row.Cells(4).Value, row.Cells(5).Value, 0, row.Cells(5).Value, 0)
+            End If
+        Next
+        DataGridView2.DataSource = dt2
+        Call noteditable()
+
+    End Sub
+
+    Private Sub dgvListBarang_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles dgvListBarang.CurrentCellDirtyStateChanged
+        If dgvListBarang.IsCurrentCellDirty Then
+            dgvListBarang.CommitEdit(DataGridViewDataErrorContexts.Commit)
+        End If
+    End Sub
+
+    Private Sub TextBox14_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox14.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+        If TextBox14.Text.Length = 1 AndAlso e.KeyChar = Convert.ToChar(Keys.Back) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TextBox14_TextChanged(sender As Object, e As EventArgs) Handles TextBox14.TextChanged
+        Dim gt As Integer
+        Dim byr As Integer
+        gt = Convert.ToInt32(TextBox1.Text)
+        byr = Convert.ToInt32(TextBox14.Text)
+        TextBox13.Text = byr - gt
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim simpan1, simpan As String
+        Call koneksi()
+        simpan = "INSERT INTO tbltransaksi (idtransaksi,tglpenjualan,grandtotal) VALUES (@p1,@p2,@p3)"
+        simpan1 = "INSERT INTO tbltransaksidetail (idtransaksi,kodebarang,qtypenjualan,hargajual,totalhrgjual) VALUES (@p4,@p5,@p6,@p7,@p8) "
+
+        cmd = conn.CreateCommand
+        With cmd
+            .CommandText = simpan
+            .Connection = conn
+            .Parameters.Add("p1", MySqlDbType.VarChar, 20).Value = TextBox6.Text
+            .Parameters.Add("p2", MySqlDbType.DateTime).Value = DateTimePicker1.Value
+            .Parameters.Add("p3", MySqlDbType.Int32).Value = Convert.ToInt32(TextBox1.Text)
+            .ExecuteNonQuery()
+        End With
+        For i As Integer = 0 To DataGridView2.Rows.Count - 2
+
+            cmd = conn.CreateCommand
+            With cmd
+                .CommandText = simpan1
+                .Connection = conn
+                .Parameters.Add("p4", MySqlDbType.VarChar, 20).Value = TextBox6.Text
+                .Parameters.Add("p5", MySqlDbType.VarChar, 20).Value = DataGridView2.Rows(i).Cells(0).Value
+                .Parameters.Add("p6", MySqlDbType.Int32).Value = DataGridView2.Rows(i).Cells(5).Value
+                .Parameters.Add("p7", MySqlDbType.Int32).Value = DataGridView2.Rows(i).Cells(3).Value
+                .Parameters.Add("p8", MySqlDbType.Int32).Value = DataGridView2.Rows(i).Cells(7).Value
+                .ExecuteNonQuery()
+            End With
+        Next
+        conn.Close()
+        cmd.Dispose()
+        For Each row As DataGridViewRow In dgvListBarang.Rows
+            Dim ischecked As Boolean = Convert.ToBoolean(row.Cells(0).Value)
+            If ischecked Then
+                row.Cells(0).Value = False
+            End If
+        Next
+        Call hitungTotal()
+        Call auto()
+        Call clear()
+        Call tampilBrg()
+
     End Sub
 End Class

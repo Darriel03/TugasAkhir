@@ -1,5 +1,23 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class stokBarang
+    Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
+        Utama.Show()
+        Me.Hide()
+    End Sub
+    Private Sub btnProduk_Click(sender As Object, e As EventArgs) Handles btnProduk.Click
+        btnProduk.Enabled = False
+    End Sub
+    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
+        Transaksi.Show()
+        Me.Hide()
+    End Sub
+    Private Sub btnStok_Click(sender As Object, e As EventArgs) Handles btnStok.Click
+        btnStok.Enabled = False
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        Laporan.Show()
+        Me.Hide()
     Private Sub tampilBrg()
         Call koneksi()
         adr = New MySqlDataAdapter("SELECT kodebarang, namabarang, merekbarang, k.namakategori, hargajual, hargabeli FROM tblbarang b INNER JOIN tblkategori k ON b.idkategori = k.idkategori", conn)
@@ -32,10 +50,27 @@ Public Class stokBarang
         Next
     End Sub
 
+    Sub noteditable()
+        DataGridView1.Columns(0).ReadOnly = True
+        DataGridView1.Columns(1).ReadOnly = True
+        DataGridView1.Columns(2).ReadOnly = True
+        DataGridView1.Columns(3).ReadOnly = True
+        DataGridView1.Columns(5).ReadOnly = True
+        DataGridView1.Columns(6).ReadOnly = True
+    End Sub
+
+    Sub clear()
+        tbNoFakturPmb.Text = ""
+        tbJumlahItem.Text = 0
+        tbGrandTotal.Text = 0
+        TextBox1.Text = 0
+        TextBox2.Text = 0
+    End Sub
+
     Private Sub stokBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call koneksi()
         Call tampilBrg()
-
+        Call clear()
     End Sub
 
     Private Sub tbCari_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tbCari.TextChanged
@@ -80,6 +115,8 @@ Public Class stokBarang
             End If
         Next
         DataGridView1.DataSource = dt2
+        Call noteditable()
+
     End Sub
 
     Private Sub dgvListBarang_CurrentCellDirtyStateChanged(sender As Object, e As EventArgs) Handles dgvListBarang.CurrentCellDirtyStateChanged
@@ -131,25 +168,26 @@ Public Class stokBarang
             Next
             Call hitungItem()
             Call hitungTotal()
+            Call clear()
+
         End If
     End Sub
-    Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
-        Utama.Show()
-        Me.Hide()
-    End Sub
-    Private Sub btnProduk_Click(sender As Object, e As EventArgs) Handles btnProduk.Click
-        btnProduk.Enabled = False
-    End Sub
-    Private Sub btnTransaksi_Click(sender As Object, e As EventArgs) Handles btnTransaksi.Click
-        Transaksi.Show()
-        Me.Hide()
-    End Sub
-    Private Sub btnStok_Click(sender As Object, e As EventArgs) Handles btnStok.Click
-        btnStok.Enabled = False
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+        If Asc(e.KeyChar) <> 8 Then
+            If Asc(e.KeyChar) < 48 Or Asc(e.KeyChar) > 57 Then
+                e.Handled = True
+            End If
+        End If
+        If TextBox1.Text.Length = 1 AndAlso e.KeyChar = Convert.ToChar(Keys.Back) Then
+            e.Handled = True
+        End If
     End Sub
 
-    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
-        Laporan.Show()
-        Me.Hide()
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        Dim gt As Integer
+        Dim byr As Integer
+        gt = Convert.ToInt32(tbGrandTotal.Text)
+        byr = Convert.ToInt32(TextBox1.Text)
+        TextBox2.Text = byr - gt
     End Sub
 End Class

@@ -22,7 +22,17 @@ Partial Class Transaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Transaksi))
+
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.btnUtama = New System.Windows.Forms.Button()
@@ -36,49 +46,129 @@ Partial Class Transaksi
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnLogout = New System.Windows.Forms.Button()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.btnProduk = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.printStruk = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.tbHarga = New System.Windows.Forms.TextBox()
-        Me.tbBarang = New System.Windows.Forms.TextBox()
-        Me.tbQty = New System.Windows.Forms.TextBox()
-        Me.txtFaktur = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.dgvTransaksi = New System.Windows.Forms.DataGridView()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.btnTambah = New System.Windows.Forms.Button()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.PrintPage = New System.Drawing.Printing.PrintDocument()
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.tbCari = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.dgvListBarang = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+
+        Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.dgvTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.dgvListBarang, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(5, 15)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(83, 19)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "No. Faktur"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(5, 57)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(64, 19)
+        Me.Label6.TabIndex = 37
+        Me.Label6.Text = "Tanggal"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(114, 51)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(175, 26)
+        Me.DateTimePicker1.TabIndex = 40
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox6.Location = New System.Drawing.Point(114, 13)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(175, 26)
+        Me.TextBox6.TabIndex = 39
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 68)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersWidth = 51
+        Me.DataGridView2.Size = New System.Drawing.Size(655, 203)
+        Me.DataGridView2.TabIndex = 41
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox14.Location = New System.Drawing.Point(196, 34)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(190, 28)
+        Me.TextBox14.TabIndex = 58
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Constantia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(388, 8)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(78, 23)
+        Me.Label15.TabIndex = 57
+        Me.Label15.Text = "Kembali"
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Enabled = False
+        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox13.Location = New System.Drawing.Point(392, 34)
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.Size = New System.Drawing.Size(190, 28)
+        Me.TextBox13.TabIndex = 56
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Constantia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(192, 8)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(55, 23)
+        Me.Label14.TabIndex = 55
+        Me.Label14.Text = "Bayar"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Constantia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(0, 8)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(51, 23)
+        Me.Label1.TabIndex = 59
+        Me.Label1.Text = "Total"
         '
         'Panel2
         '
@@ -101,43 +191,42 @@ Partial Class Transaksi
         Me.Panel2.Controls.Add(Me.PictureBox8)
         Me.Panel2.Controls.Add(Me.btnProduk)
         Me.Panel2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+
+        Me.Panel2.Location = New System.Drawing.Point(1, 0)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(310, 655)
-        Me.Panel2.TabIndex = 66
+        Me.Panel2.Size = New System.Drawing.Size(216, 508)
+        Me.Panel2.TabIndex = 60
         '
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.FinalPorject.My.Resources.Resources.home__1_
-        Me.PictureBox12.Location = New System.Drawing.Point(18, 203)
-        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox12.Location = New System.Drawing.Point(14, 156)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox12.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox12.TabIndex = 80
         Me.PictureBox12.TabStop = False
         '
         'btnUtama
         '
-        Me.btnUtama.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.btnUtama.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUtama.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnUtama.Location = New System.Drawing.Point(-5, 196)
-        Me.btnUtama.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnUtama.Name = "btnUtama"
-        Me.btnUtama.Size = New System.Drawing.Size(322, 62)
-        Me.btnUtama.TabIndex = 85
-        Me.btnUtama.Text = "Menu Utama"
-        Me.btnUtama.UseVisualStyleBackColor = False
+        Me.PictureBox8.Image = Global.FinalPorject.My.Resources.Resources.gadgets
+        Me.PictureBox8.Location = New System.Drawing.Point(12, 200)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(39, 38)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 66
+        Me.PictureBox8.TabStop = False
         '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.FinalPorject.My.Resources.Resources.trolley
-        Me.PictureBox10.Location = New System.Drawing.Point(18, 371)
-        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox10.Location = New System.Drawing.Point(14, 292)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox10.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox10.TabIndex = 78
         Me.PictureBox10.TabStop = False
@@ -145,10 +234,10 @@ Partial Class Transaksi
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.FinalPorject.My.Resources.Resources.cash_flow
-        Me.PictureBox11.Location = New System.Drawing.Point(18, 428)
-        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox11.Location = New System.Drawing.Point(13, 339)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox11.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox11.TabIndex = 79
         Me.PictureBox11.TabStop = False
@@ -156,71 +245,86 @@ Partial Class Transaksi
         'PictureBox9
         '
         Me.PictureBox9.Image = Global.FinalPorject.My.Resources.Resources.pay
-        Me.PictureBox9.Location = New System.Drawing.Point(18, 313)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox9.Location = New System.Drawing.Point(13, 245)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox9.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 77
         Me.PictureBox9.TabStop = False
         '
-        'btnLaporan
+
+        'Button3
         '
-        Me.btnLaporan.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLaporan.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnLaporan.Location = New System.Drawing.Point(-6, 420)
-        Me.btnLaporan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnLaporan.Name = "btnLaporan"
-        Me.btnLaporan.Size = New System.Drawing.Size(323, 62)
-        Me.btnLaporan.TabIndex = 84
-        Me.btnLaporan.Text = "Laporan"
-        Me.btnLaporan.UseVisualStyleBackColor = False
+        Me.Button3.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button3.Location = New System.Drawing.Point(-4, 333)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(231, 50)
+        Me.Button3.TabIndex = 74
+        Me.Button3.Text = "Laporan"
+        Me.Button3.UseVisualStyleBackColor = False
         '
-        'btnStok
+        'Button2
         '
-        Me.btnStok.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStok.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnStok.Location = New System.Drawing.Point(-6, 364)
-        Me.btnStok.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnStok.Name = "btnStok"
-        Me.btnStok.Size = New System.Drawing.Size(323, 62)
-        Me.btnStok.TabIndex = 82
-        Me.btnStok.Text = "Stok Barang"
-        Me.btnStok.UseVisualStyleBackColor = False
+        Me.Button2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button2.Location = New System.Drawing.Point(-4, 287)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(231, 50)
+        Me.Button2.TabIndex = 72
+        Me.Button2.Text = "Stok Barang"
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'btnTransaksi
+        'Button1
         '
-        Me.btnTransaksi.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTransaksi.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnTransaksi.Location = New System.Drawing.Point(-6, 308)
-        Me.btnTransaksi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnTransaksi.Name = "btnTransaksi"
-        Me.btnTransaksi.Size = New System.Drawing.Size(323, 62)
-        Me.btnTransaksi.TabIndex = 83
-        Me.btnTransaksi.Text = " Transaksi"
-        Me.btnTransaksi.UseVisualStyleBackColor = False
+        Me.Button1.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button1.Location = New System.Drawing.Point(-4, 241)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(231, 50)
+        Me.Button1.TabIndex = 73
+        Me.Button1.Text = " Transaksi"
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'PictureBox13
+        'Btn
         '
-        Me.PictureBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox13.Image = Global.FinalPorject.My.Resources.Resources.logout__1_
-        Me.PictureBox13.Location = New System.Drawing.Point(9, 603)
-        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(59, 47)
-        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox13.TabIndex = 67
-        Me.PictureBox13.TabStop = False
+        Me.Btn.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn.ForeColor = System.Drawing.SystemColors.Control
+        Me.Btn.Location = New System.Drawing.Point(-4, 196)
+        Me.Btn.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn.Name = "Btn"
+        Me.Btn.Size = New System.Drawing.Size(231, 50)
+        Me.Btn.TabIndex = 71
+        Me.Btn.Text = "Data Produk"
+        Me.Btn.UseVisualStyleBackColor = False
+        '
+        'Button17
+        '
+        Me.Button17.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button17.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button17.Location = New System.Drawing.Point(-4, 150)
+        Me.Button17.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(231, 50)
+        Me.Button17.TabIndex = 75
+        Me.Button17.Text = "Menu Utama"
+        Me.Button17.UseVisualStyleBackColor = False
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(136, 53)
+
+        Me.Label3.Location = New System.Drawing.Point(93, 37)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 24)
-        Me.Label3.TabIndex = 4
+        Me.Label3.Size = New System.Drawing.Size(41, 19)
+        Me.Label3.TabIndex = 63
         Me.Label3.Text = "User"
         '
         'Label2
@@ -228,10 +332,12 @@ Partial Class Transaksi
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label2.Location = New System.Drawing.Point(135, 21)
+
+        Me.Label2.Location = New System.Drawing.Point(92, 11)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(154, 24)
-        Me.Label2.TabIndex = 0
+        Me.Label2.Size = New System.Drawing.Size(125, 19)
+        Me.Label2.TabIndex = 61
         Me.Label2.Text = "Selamat Datang,"
         '
         'PictureBox1
@@ -239,25 +345,25 @@ Partial Class Transaksi
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = Global.FinalPorject.My.Resources.Resources._60111
-        Me.PictureBox1.Location = New System.Drawing.Point(10, 11)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 10)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(117, 105)
+        Me.PictureBox1.Size = New System.Drawing.Size(80, 86)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
         'btnLogout
         '
-        Me.btnLogout.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnLogout.Location = New System.Drawing.Point(-6, 595)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(323, 62)
-        Me.btnLogout.TabIndex = 86
-        Me.btnLogout.Text = "Logout"
-        Me.btnLogout.UseVisualStyleBackColor = False
+        Me.PictureBox13.Image = Global.FinalPorject.My.Resources.Resources.logout__1_
+        Me.PictureBox13.Location = New System.Drawing.Point(9, 468)
+        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(39, 38)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox13.TabIndex = 60
+        Me.PictureBox13.TabStop = False
         '
         'PictureBox8
         '
@@ -304,7 +410,16 @@ Partial Class Transaksi
         Me.GroupBox1.TabIndex = 64
         Me.GroupBox1.TabStop = False
         '
-        'printStruk
+
+        Me.Button4.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.SystemColors.Control
+        Me.Button4.Location = New System.Drawing.Point(-4, 462)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(231, 50)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Logout"
+        Me.Button4.UseVisualStyleBackColor = False
         '
         Me.printStruk.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.printStruk.Location = New System.Drawing.Point(678, 193)
@@ -314,273 +429,131 @@ Partial Class Transaksi
         Me.printStruk.Text = "Print Struk"
         Me.printStruk.UseVisualStyleBackColor = True
         '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(400, 93)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(83, 33)
-        Me.Button5.TabIndex = 60
-        Me.Button5.Text = "Cari"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(152, 60)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(168, 30)
-        Me.ComboBox2.TabIndex = 42
-        '
-        'tbHarga
-        '
-        Me.tbHarga.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbHarga.Location = New System.Drawing.Point(152, 176)
-        Me.tbHarga.Margin = New System.Windows.Forms.Padding(4)
-        Me.tbHarga.Name = "tbHarga"
-        Me.tbHarga.Size = New System.Drawing.Size(168, 30)
-        Me.tbHarga.TabIndex = 48
-        '
-        'tbBarang
-        '
-        Me.tbBarang.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbBarang.Location = New System.Drawing.Point(152, 98)
-        Me.tbBarang.Margin = New System.Windows.Forms.Padding(4)
-        Me.tbBarang.Name = "tbBarang"
-        Me.tbBarang.Size = New System.Drawing.Size(221, 30)
-        Me.tbBarang.TabIndex = 45
-        '
-        'tbQty
-        '
-        Me.tbQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbQty.Location = New System.Drawing.Point(152, 136)
-        Me.tbQty.Margin = New System.Windows.Forms.Padding(4)
-        Me.tbQty.Name = "tbQty"
-        Me.tbQty.Size = New System.Drawing.Size(103, 30)
-        Me.tbQty.TabIndex = 46
-        '
-        'txtFaktur
-        '
-        Me.txtFaktur.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFaktur.Location = New System.Drawing.Point(152, 22)
-        Me.txtFaktur.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtFaktur.Name = "txtFaktur"
-        Me.txtFaktur.Size = New System.Drawing.Size(232, 30)
-        Me.txtFaktur.TabIndex = 39
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 24)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(102, 24)
-        Me.Label7.TabIndex = 38
-        Me.Label7.Text = "No. Faktur"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(7, 139)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(43, 24)
-        Me.Label11.TabIndex = 47
-        Me.Label11.Text = "Qty"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(529, 24)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 24)
-        Me.Label6.TabIndex = 37
-        Me.Label6.Text = "Tanggal"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(615, 22)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(245, 30)
-        Me.DateTimePicker1.TabIndex = 40
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(7, 104)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(129, 24)
-        Me.Label10.TabIndex = 44
-        Me.Label10.Text = "Nama Barang"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(7, 177)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(64, 24)
-        Me.Label12.TabIndex = 50
-        Me.Label12.Text = "Harga"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(7, 64)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(122, 24)
-        Me.Label9.TabIndex = 43
-        Me.Label9.Text = "Kode Barang"
+
+        Me.Panel1.Controls.Add(Me.GroupBox2)
+        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Location = New System.Drawing.Point(213, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(676, 512)
+        Me.Panel1.TabIndex = 61
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.dgvTransaksi)
+        Me.GroupBox2.Controls.Add(Me.DataGridView2)
         Me.GroupBox2.Controls.Add(Me.Button6)
-        Me.GroupBox2.Controls.Add(Me.TextBox14)
-        Me.GroupBox2.Controls.Add(Me.btnTambah)
-        Me.GroupBox2.Controls.Add(Me.TextBox13)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.Label15)
+        Me.GroupBox2.Controls.Add(Me.TextBox13)
         Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Location = New System.Drawing.Point(319, 257)
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.TextBox14)
+        Me.GroupBox2.Location = New System.Drawing.Point(8, 226)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(879, 384)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Size = New System.Drawing.Size(656, 271)
         Me.GroupBox2.TabIndex = 65
         Me.GroupBox2.TabStop = False
         '
-        'dgvTransaksi
-        '
-        Me.dgvTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTransaksi.Location = New System.Drawing.Point(11, 13)
-        Me.dgvTransaksi.Margin = New System.Windows.Forms.Padding(4)
-        Me.dgvTransaksi.Name = "dgvTransaksi"
-        Me.dgvTransaksi.RowHeadersWidth = 51
-        Me.dgvTransaksi.Size = New System.Drawing.Size(581, 364)
-        Me.dgvTransaksi.TabIndex = 41
-        '
         'Button6
         '
-        Me.Button6.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(759, 21)
+
+        Me.Button6.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(586, 33)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(108, 45)
+        Me.Button6.Size = New System.Drawing.Size(69, 29)
         Me.Button6.TabIndex = 63
         Me.Button6.Text = "Simpan"
         Me.Button6.UseVisualStyleBackColor = True
         '
-        'TextBox14
-        '
-        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(729, 214)
-        Me.TextBox14.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(138, 34)
-        Me.TextBox14.TabIndex = 58
-        '
-        'btnTambah
-        '
-        Me.btnTambah.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTambah.Location = New System.Drawing.Point(625, 21)
-        Me.btnTambah.Name = "btnTambah"
-        Me.btnTambah.Size = New System.Drawing.Size(108, 45)
-        Me.btnTambah.TabIndex = 62
-        Me.btnTambah.Text = "Tambah"
-        Me.btnTambah.UseVisualStyleBackColor = True
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(729, 172)
-        Me.TextBox13.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(138, 34)
-        Me.TextBox13.TabIndex = 56
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(601, 283)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(266, 92)
-        Me.TextBox8.TabIndex = 54
-        '
+
         'TextBox1
         '
+        Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(730, 129)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+
+        Me.TextBox1.Location = New System.Drawing.Point(0, 34)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(137, 34)
+        Me.TextBox1.Size = New System.Drawing.Size(190, 28)
         Me.TextBox1.TabIndex = 61
         '
-        'Label1
+
+        'GroupBox1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Constantia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(599, 133)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 29)
-        Me.Label1.TabIndex = 59
-        Me.Label1.Text = "Total"
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
+        Me.GroupBox1.Controls.Add(Me.tbCari)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.dgvListBarang)
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Location = New System.Drawing.Point(8, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(656, 235)
+        Me.GroupBox1.TabIndex = 64
+        Me.GroupBox1.TabStop = False
         '
-        'Label15
+        'Label5
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Constantia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(599, 219)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(101, 29)
-        Me.Label15.TabIndex = 57
-        Me.Label15.Text = "Kembali"
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(380, 17)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(45, 19)
+        Me.Label5.TabIndex = 73
+        Me.Label5.Text = "Kasir"
         '
-        'Label14
+        'ComboBox1
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Constantia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(599, 176)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(72, 29)
-        Me.Label14.TabIndex = 55
-        Me.Label14.Text = "Bayar"
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Dian", "Darriel", "Beechan"})
+        Me.ComboBox1.Location = New System.Drawing.Point(462, 11)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(189, 28)
+        Me.ComboBox1.TabIndex = 72
         '
-        'PrintPreviewDialog1
+        'tbCari
         '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
+        Me.tbCari.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCari.Location = New System.Drawing.Point(462, 53)
+        Me.tbCari.Name = "tbCari"
+        Me.tbCari.Size = New System.Drawing.Size(189, 26)
+        Me.tbCari.TabIndex = 71
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(380, 57)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 19)
+        Me.Label4.TabIndex = 70
+        Me.Label4.Text = "Cari Data"
+        '
+        'dgvListBarang
+        '
+        Me.dgvListBarang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvListBarang.Location = New System.Drawing.Point(4, 85)
+        Me.dgvListBarang.Name = "dgvListBarang"
+        Me.dgvListBarang.Size = New System.Drawing.Size(649, 134)
+        Me.dgvListBarang.TabIndex = 68
+
         '
         'Transaksi
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1207, 653)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(886, 506)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Transaksi"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Retina Digicam"
@@ -591,21 +564,22 @@ Partial Class Transaksi
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+
+        Me.Panel1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.dgvTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.dgvListBarang, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents DataGridView2 As DataGridView
 
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents dgvTransaksi As DataGridView
-    Friend WithEvents Button6 As Button
     Friend WithEvents TextBox14 As TextBox
     Friend WithEvents btnTambah As Button
     Friend WithEvents TextBox13 As TextBox
@@ -626,24 +600,17 @@ Partial Class Transaksi
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents btnLogout As Button
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents btnProduk As Button
+
+    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button6 As Button
+    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents tbHarga As TextBox
-    Friend WithEvents tbBarang As TextBox
-    Friend WithEvents tbQty As TextBox
-    Friend WithEvents txtFaktur As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents printStruk As Button
-    Friend WithEvents PrintPage As Printing.PrintDocument
-    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents dgvListBarang As DataGridView
+    Friend WithEvents Label4 As Label
+    Friend WithEvents tbCari As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
