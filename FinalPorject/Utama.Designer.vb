@@ -35,23 +35,23 @@ Partial Class Utama
         Me.btnLaporan = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -63,11 +63,11 @@ Partial Class Utama
         Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(159, 44)
+        Me.GroupBox1.Location = New System.Drawing.Point(52, 44)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(575, 568)
+        Me.GroupBox1.Size = New System.Drawing.Size(801, 569)
         Me.GroupBox1.TabIndex = 54
         Me.GroupBox1.TabStop = False
         '
@@ -75,24 +75,27 @@ Partial Class Utama
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Constantia", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Constantia", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(18, 128)
+        Me.Label4.Location = New System.Drawing.Point(56, 111)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(529, 319)
+        Me.Label4.Size = New System.Drawing.Size(610, 385)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = resources.GetString("Label4.Text")
         '
         'Label2
         '
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Constantia", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(157, 20)
+        Me.Label2.Location = New System.Drawing.Point(274, 26)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(238, 46)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Profile Toko"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
@@ -214,17 +217,6 @@ Partial Class Utama
         Me.PictureBox12.TabIndex = 80
         Me.PictureBox12.TabStop = False
         '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.FinalPorject.My.Resources.Resources.gadgets
-        Me.PictureBox8.Location = New System.Drawing.Point(16, 257)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(52, 47)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 76
-        Me.PictureBox8.TabStop = False
-        '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.FinalPorject.My.Resources.Resources.trolley
@@ -283,16 +275,6 @@ Partial Class Utama
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Panel1
-        '
-        Me.Panel1.BackgroundImage = Global.FinalPorject.My.Resources.Resources.Screenshot_20221219_175705_Maps
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Location = New System.Drawing.Point(308, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(904, 652)
-        Me.Panel1.TabIndex = 55
-        '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -304,6 +286,27 @@ Partial Class Utama
         Me.Button1.TabIndex = 86
         Me.Button1.Text = "Logout"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.FinalPorject.My.Resources.Resources.gadgets
+        Me.PictureBox8.Location = New System.Drawing.Point(16, 257)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(52, 47)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 76
+        Me.PictureBox8.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackgroundImage = Global.FinalPorject.My.Resources.Resources.Screenshot_20221219_175705_Maps
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Location = New System.Drawing.Point(308, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(904, 652)
+        Me.Panel1.TabIndex = 55
         '
         'Utama
         '
@@ -322,12 +325,12 @@ Partial Class Utama
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
