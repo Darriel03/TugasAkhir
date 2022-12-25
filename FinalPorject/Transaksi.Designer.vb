@@ -22,7 +22,6 @@ Partial Class Transaksi
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -35,14 +34,15 @@ Partial Class Transaksi
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.btnUtama = New System.Windows.Forms.Button()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.btnLaporan = New System.Windows.Forms.Button()
-        Me.btnStok = New System.Windows.Forms.Button()
-        Me.btnTransaksi = New System.Windows.Forms.Button()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Btn = New System.Windows.Forms.Button()
+        Me.Button17 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -59,14 +59,14 @@ Partial Class Transaksi
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dgvListBarang = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -172,26 +172,23 @@ Partial Class Transaksi
         '
         'Panel2
         '
-        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.CadetBlue
         Me.Panel2.Controls.Add(Me.PictureBox12)
-        Me.Panel2.Controls.Add(Me.btnUtama)
+        Me.Panel2.Controls.Add(Me.PictureBox8)
         Me.Panel2.Controls.Add(Me.PictureBox10)
         Me.Panel2.Controls.Add(Me.PictureBox11)
         Me.Panel2.Controls.Add(Me.PictureBox9)
-        Me.Panel2.Controls.Add(Me.btnLaporan)
-        Me.Panel2.Controls.Add(Me.btnStok)
-        Me.Panel2.Controls.Add(Me.btnTransaksi)
-        Me.Panel2.Controls.Add(Me.PictureBox13)
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.Btn)
+        Me.Panel2.Controls.Add(Me.Button17)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Controls.Add(Me.btnLogout)
-        Me.Panel2.Controls.Add(Me.PictureBox8)
-        Me.Panel2.Controls.Add(Me.btnProduk)
+        Me.Panel2.Controls.Add(Me.PictureBox13)
+        Me.Panel2.Controls.Add(Me.Button4)
         Me.Panel2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-
         Me.Panel2.Location = New System.Drawing.Point(1, 0)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
@@ -206,10 +203,10 @@ Partial Class Transaksi
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox12.TabIndex = 80
+        Me.PictureBox12.TabIndex = 70
         Me.PictureBox12.TabStop = False
         '
-        'btnUtama
+        'PictureBox8
         '
         Me.PictureBox8.Image = Global.FinalPorject.My.Resources.Resources.gadgets
         Me.PictureBox8.Location = New System.Drawing.Point(12, 200)
@@ -228,7 +225,7 @@ Partial Class Transaksi
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox10.TabIndex = 78
+        Me.PictureBox10.TabIndex = 68
         Me.PictureBox10.TabStop = False
         '
         'PictureBox11
@@ -239,7 +236,7 @@ Partial Class Transaksi
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox11.TabIndex = 79
+        Me.PictureBox11.TabIndex = 69
         Me.PictureBox11.TabStop = False
         '
         'PictureBox9
@@ -250,10 +247,9 @@ Partial Class Transaksi
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 77
+        Me.PictureBox9.TabIndex = 67
         Me.PictureBox9.TabStop = False
         '
-
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -319,7 +315,6 @@ Partial Class Transaksi
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-
         Me.Label3.Location = New System.Drawing.Point(93, 37)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
@@ -332,7 +327,6 @@ Partial Class Transaksi
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Control
-
         Me.Label2.Location = New System.Drawing.Point(92, 11)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
@@ -345,16 +339,15 @@ Partial Class Transaksi
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = Global.FinalPorject.My.Resources.Resources._60111
-
         Me.PictureBox1.Location = New System.Drawing.Point(9, 10)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(80, 86)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabIndex = 62
         Me.PictureBox1.TabStop = False
         '
-        'btnLogout
+        'PictureBox13
         '
         Me.PictureBox13.Image = Global.FinalPorject.My.Resources.Resources.logout__1_
         Me.PictureBox13.Location = New System.Drawing.Point(9, 468)
@@ -365,52 +358,8 @@ Partial Class Transaksi
         Me.PictureBox13.TabIndex = 60
         Me.PictureBox13.TabStop = False
         '
-        'PictureBox8
+        'Button4
         '
-        Me.PictureBox8.Image = Global.FinalPorject.My.Resources.Resources.gadgets
-        Me.PictureBox8.Location = New System.Drawing.Point(16, 257)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(52, 47)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 76
-        Me.PictureBox8.TabStop = False
-        '
-        'btnProduk
-        '
-        Me.btnProduk.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProduk.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnProduk.Location = New System.Drawing.Point(-6, 252)
-        Me.btnProduk.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnProduk.Name = "btnProduk"
-        Me.btnProduk.Size = New System.Drawing.Size(323, 62)
-        Me.btnProduk.TabIndex = 81
-        Me.btnProduk.Text = "Data Produk"
-        Me.btnProduk.UseVisualStyleBackColor = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.printStruk)
-        Me.GroupBox1.Controls.Add(Me.Button5)
-        Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.tbHarga)
-        Me.GroupBox1.Controls.Add(Me.tbBarang)
-        Me.GroupBox1.Controls.Add(Me.tbQty)
-        Me.GroupBox1.Controls.Add(Me.txtFaktur)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Location = New System.Drawing.Point(319, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(876, 247)
-        Me.GroupBox1.TabIndex = 64
-        Me.GroupBox1.TabStop = False
-        '
-
         Me.Button4.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.SystemColors.Control
         Me.Button4.Location = New System.Drawing.Point(-4, 462)
@@ -421,15 +370,8 @@ Partial Class Transaksi
         Me.Button4.Text = "Logout"
         Me.Button4.UseVisualStyleBackColor = False
         '
-        Me.printStruk.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.printStruk.Location = New System.Drawing.Point(678, 193)
-        Me.printStruk.Name = "printStruk"
-        Me.printStruk.Size = New System.Drawing.Size(137, 41)
-        Me.printStruk.TabIndex = 61
-        Me.printStruk.Text = "Print Struk"
-        Me.printStruk.UseVisualStyleBackColor = True
+        'Panel1
         '
-
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Location = New System.Drawing.Point(213, 0)
@@ -458,7 +400,6 @@ Partial Class Transaksi
         '
         'Button6
         '
-
         Me.Button6.Font = New System.Drawing.Font("Constantia", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(586, 33)
         Me.Button6.Margin = New System.Windows.Forms.Padding(2)
@@ -468,18 +409,15 @@ Partial Class Transaksi
         Me.Button6.Text = "Simpan"
         Me.Button6.UseVisualStyleBackColor = True
         '
-
         'TextBox1
         '
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-
         Me.TextBox1.Location = New System.Drawing.Point(0, 34)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(190, 28)
         Me.TextBox1.TabIndex = 61
         '
-
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Label5)
@@ -544,7 +482,6 @@ Partial Class Transaksi
         Me.dgvListBarang.Name = "dgvListBarang"
         Me.dgvListBarang.Size = New System.Drawing.Size(649, 134)
         Me.dgvListBarang.TabIndex = 68
-
         '
         'Transaksi
         '
@@ -555,16 +492,17 @@ Partial Class Transaksi
         Me.Controls.Add(Me.Panel2)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Transaksi"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Retina Digicam"
+        Me.Text = "Form1"
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -579,28 +517,25 @@ Partial Class Transaksi
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents DataGridView2 As DataGridView
-
     Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents btnTambah As Button
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents TextBox13 As TextBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox12 As PictureBox
-    Friend WithEvents btnUtama As Button
+    Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents PictureBox11 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
-    Friend WithEvents btnLaporan As Button
-    Friend WithEvents btnStok As Button
-    Friend WithEvents btnTransaksi As Button
-    Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Btn As Button
+    Friend WithEvents Button17 As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
-
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Panel1 As Panel
