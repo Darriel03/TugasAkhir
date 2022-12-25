@@ -55,7 +55,7 @@ Partial Class Transaksi
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.dgvTransaksi = New System.Windows.Forms.DataGridView()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.btnTambah = New System.Windows.Forms.Button()
@@ -77,7 +77,7 @@ Partial Class Transaksi
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTransaksi, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -448,7 +448,7 @@ Partial Class Transaksi
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.DataGridView2)
+        Me.GroupBox2.Controls.Add(Me.dgvTransaksi)
         Me.GroupBox2.Controls.Add(Me.Button6)
         Me.GroupBox2.Controls.Add(Me.TextBox14)
         Me.GroupBox2.Controls.Add(Me.btnTambah)
@@ -464,15 +464,15 @@ Partial Class Transaksi
         Me.GroupBox2.TabIndex = 65
         Me.GroupBox2.TabStop = False
         '
-        'DataGridView2
+        'dgvTransaksi
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(11, 13)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(4)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersWidth = 51
-        Me.DataGridView2.Size = New System.Drawing.Size(581, 364)
-        Me.DataGridView2.TabIndex = 41
+        Me.dgvTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTransaksi.Location = New System.Drawing.Point(11, 13)
+        Me.dgvTransaksi.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvTransaksi.Name = "dgvTransaksi"
+        Me.dgvTransaksi.RowHeadersWidth = 51
+        Me.dgvTransaksi.Size = New System.Drawing.Size(581, 364)
+        Me.dgvTransaksi.TabIndex = 41
         '
         'Button6
         '
@@ -597,14 +597,14 @@ Partial Class Transaksi
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTransaksi, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel2 As Panel
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents dgvTransaksi As DataGridView
     Friend WithEvents Button6 As Button
     Friend WithEvents TextBox14 As TextBox
     Friend WithEvents btnTambah As Button
