@@ -53,7 +53,7 @@ Public Class laporan
         Dim height As Integer = DataGridView2.Height
         DataGridView2.Height = DataGridView2.RowCount * DataGridView2.RowTemplate.Height
         bitmap = New Bitmap(Me.DataGridView2.Width, Me.DataGridView2.Height)
-        DataGridView2.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView2.Height))
+        DataGridView2.DrawToBitmap(bitmap, New Rectangle(0, 0, Me.DataGridView2.Width, Me.DataGridView2.Height))
         PrintPreviewDialog1.Document = PrintDocument1
         PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
         PrintPreviewDialog1.ShowDialog()
