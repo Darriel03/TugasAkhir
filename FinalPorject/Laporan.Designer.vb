@@ -26,13 +26,11 @@ Partial Class laporan
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(laporan))
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPagePenjualan = New System.Windows.Forms.TabPage()
-        Me.btnPrint = New System.Windows.Forms.Button()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabPagePembelian = New System.Windows.Forms.TabPage()
-        Me.btnPrintPembelian = New System.Windows.Forms.Button()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -87,7 +85,6 @@ Partial Class laporan
         '
         'TabPagePenjualan
         '
-        Me.TabPagePenjualan.Controls.Add(Me.btnPrint)
         Me.TabPagePenjualan.Controls.Add(Me.DateTimePicker3)
         Me.TabPagePenjualan.Controls.Add(Me.Button5)
         Me.TabPagePenjualan.Controls.Add(Me.DateTimePicker1)
@@ -100,17 +97,6 @@ Partial Class laporan
         Me.TabPagePenjualan.TabIndex = 0
         Me.TabPagePenjualan.Text = "Laporan Penjualan"
         Me.TabPagePenjualan.UseVisualStyleBackColor = True
-        '
-        'btnPrint
-        '
-        Me.btnPrint.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrint.Location = New System.Drawing.Point(592, 19)
-        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(68, 25)
-        Me.btnPrint.TabIndex = 63
-        Me.btnPrint.Text = "Print"
-        Me.btnPrint.UseVisualStyleBackColor = True
         '
         'DateTimePicker3
         '
@@ -160,7 +146,6 @@ Partial Class laporan
         '
         'TabPagePembelian
         '
-        Me.TabPagePembelian.Controls.Add(Me.btnPrintPembelian)
         Me.TabPagePembelian.Controls.Add(Me.DateTimePicker4)
         Me.TabPagePembelian.Controls.Add(Me.Button6)
         Me.TabPagePembelian.Controls.Add(Me.DateTimePicker2)
@@ -173,17 +158,6 @@ Partial Class laporan
         Me.TabPagePembelian.TabIndex = 1
         Me.TabPagePembelian.Text = "Laporan Pembelian"
         Me.TabPagePembelian.UseVisualStyleBackColor = True
-        '
-        'btnPrintPembelian
-        '
-        Me.btnPrintPembelian.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrintPembelian.Location = New System.Drawing.Point(589, 17)
-        Me.btnPrintPembelian.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnPrintPembelian.Name = "btnPrintPembelian"
-        Me.btnPrintPembelian.Size = New System.Drawing.Size(74, 26)
-        Me.btnPrintPembelian.TabIndex = 66
-        Me.btnPrintPembelian.Text = "Print"
-        Me.btnPrintPembelian.UseVisualStyleBackColor = True
         '
         'DateTimePicker4
         '
@@ -413,7 +387,7 @@ Partial Class laporan
         '
         Me.btnLogout.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnLogout.Location = New System.Drawing.Point(-4, 483)
+        Me.btnLogout.Location = New System.Drawing.Point(-4, 484)
         Me.btnLogout.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(242, 50)
@@ -513,8 +487,6 @@ Partial Class laporan
     Friend WithEvents btnLogout As Button
     Friend WithEvents PictureBox8 As PictureBox
     Friend WithEvents btnProduk As Button
-    Friend WithEvents btnPrint As Button
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
-    Friend WithEvents btnPrintPembelian As Button
 End Class

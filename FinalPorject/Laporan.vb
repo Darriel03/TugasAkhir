@@ -65,7 +65,7 @@ Public Class laporan
         PrintPreviewDialog1.ShowDialog()
         DataGridView1.Height = height
     End Sub
-    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs)
         iPrintPenjualan()
     End Sub
     Private Sub iPrintPembeliann()
@@ -78,7 +78,7 @@ Public Class laporan
         PrintPreviewDialog1.ShowDialog()
         DataGridView1.Height = height
     End Sub
-    Private Sub btnPrintPembelian_Click(sender As Object, e As EventArgs) Handles btnPrintPembelian.Click
+    Private Sub btnPrintPembelian_Click(sender As Object, e As EventArgs)
         iPrintPembeliann()
     End Sub
 
@@ -114,5 +114,12 @@ Public Class laporan
     Private Sub laporan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampillappenjualanannow()
              
+    End Sub
+
+    Private Sub btnLogout_Click_1(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Dim result As Integer = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 End Class

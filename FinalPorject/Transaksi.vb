@@ -233,12 +233,14 @@ SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) 
 
     Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
         Utama.Show()
-        Me.Hide()
+        Me.Close()
+
     End Sub
 
     Private Sub Btn_Click(sender As Object, e As EventArgs) Handles Btn.Click
         Produk.Show()
-        Me.Hide()
+        Me.Close()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -247,14 +249,14 @@ SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) 
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         stokBarang.Show()
-        Me.Hide()
+        Me.Close()
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim result As Integer = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo)
-        If result = DialogResult.Yes Then
-            Me.Close()
-        End If
+        laporan.Show()
+        Me.Close()
+
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
