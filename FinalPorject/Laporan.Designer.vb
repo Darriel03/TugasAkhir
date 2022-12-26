@@ -79,7 +79,7 @@ Partial Class laporan
         Me.TabControl2.Controls.Add(Me.TabPagePenjualan)
         Me.TabControl2.Controls.Add(Me.TabPagePembelian)
         Me.TabControl2.Location = New System.Drawing.Point(230, 0)
-        Me.TabControl2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabControl2.Margin = New System.Windows.Forms.Padding(2)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.Size = New System.Drawing.Size(679, 534)
@@ -93,9 +93,9 @@ Partial Class laporan
         Me.TabPagePenjualan.Controls.Add(Me.DateTimePicker1)
         Me.TabPagePenjualan.Controls.Add(Me.DataGridView1)
         Me.TabPagePenjualan.Location = New System.Drawing.Point(4, 22)
-        Me.TabPagePenjualan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPagePenjualan.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPagePenjualan.Name = "TabPagePenjualan"
-        Me.TabPagePenjualan.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPagePenjualan.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPagePenjualan.Size = New System.Drawing.Size(671, 508)
         Me.TabPagePenjualan.TabIndex = 0
         Me.TabPagePenjualan.Text = "Laporan Penjualan"
@@ -105,7 +105,7 @@ Partial Class laporan
         '
         Me.btnPrint.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrint.Location = New System.Drawing.Point(592, 19)
-        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(68, 25)
         Me.btnPrint.TabIndex = 63
@@ -119,7 +119,7 @@ Partial Class laporan
         Me.DateTimePicker3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker3.Location = New System.Drawing.Point(174, 20)
-        Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(151, 26)
         Me.DateTimePicker3.TabIndex = 62
@@ -128,7 +128,7 @@ Partial Class laporan
         '
         Me.Button5.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(334, 19)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(62, 27)
         Me.Button5.TabIndex = 61
@@ -142,7 +142,7 @@ Partial Class laporan
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(10, 20)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(151, 26)
         Me.DateTimePicker1.TabIndex = 1
@@ -151,7 +151,7 @@ Partial Class laporan
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(10, 63)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -166,9 +166,9 @@ Partial Class laporan
         Me.TabPagePembelian.Controls.Add(Me.DateTimePicker2)
         Me.TabPagePembelian.Controls.Add(Me.DataGridView2)
         Me.TabPagePembelian.Location = New System.Drawing.Point(4, 22)
-        Me.TabPagePembelian.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPagePembelian.Margin = New System.Windows.Forms.Padding(2)
         Me.TabPagePembelian.Name = "TabPagePembelian"
-        Me.TabPagePembelian.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TabPagePembelian.Padding = New System.Windows.Forms.Padding(2)
         Me.TabPagePembelian.Size = New System.Drawing.Size(671, 508)
         Me.TabPagePembelian.TabIndex = 1
         Me.TabPagePembelian.Text = "Laporan Pembelian"
@@ -178,7 +178,7 @@ Partial Class laporan
         '
         Me.btnPrintPembelian.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPrintPembelian.Location = New System.Drawing.Point(589, 17)
-        Me.btnPrintPembelian.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnPrintPembelian.Margin = New System.Windows.Forms.Padding(2)
         Me.btnPrintPembelian.Name = "btnPrintPembelian"
         Me.btnPrintPembelian.Size = New System.Drawing.Size(74, 26)
         Me.btnPrintPembelian.TabIndex = 66
@@ -192,7 +192,7 @@ Partial Class laporan
         Me.DateTimePicker4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker4.Location = New System.Drawing.Point(167, 19)
-        Me.DateTimePicker4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker4.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(151, 26)
         Me.DateTimePicker4.TabIndex = 65
@@ -201,7 +201,7 @@ Partial Class laporan
         '
         Me.Button6.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.Location = New System.Drawing.Point(322, 17)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(62, 27)
         Me.Button6.TabIndex = 64
@@ -215,7 +215,7 @@ Partial Class laporan
         Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker2.Location = New System.Drawing.Point(13, 19)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(151, 26)
         Me.DateTimePicker2.TabIndex = 63
@@ -224,7 +224,7 @@ Partial Class laporan
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(10, 60)
-        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView2.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.RowHeadersWidth = 51
         Me.DataGridView2.RowTemplate.Height = 24
@@ -263,7 +263,7 @@ Partial Class laporan
         Me.Panel2.Controls.Add(Me.btnProduk)
         Me.Panel2.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(232, 531)
         Me.Panel2.TabIndex = 64
@@ -272,7 +272,7 @@ Partial Class laporan
         '
         Me.PictureBox12.Image = Global.FinalPorject.My.Resources.Resources.home__1_
         Me.PictureBox12.Location = New System.Drawing.Point(14, 165)
-        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -284,7 +284,7 @@ Partial Class laporan
         Me.btnUtama.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUtama.ForeColor = System.Drawing.SystemColors.Control
         Me.btnUtama.Location = New System.Drawing.Point(-4, 159)
-        Me.btnUtama.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUtama.Margin = New System.Windows.Forms.Padding(2)
         Me.btnUtama.Name = "btnUtama"
         Me.btnUtama.Size = New System.Drawing.Size(242, 50)
         Me.btnUtama.TabIndex = 85
@@ -295,7 +295,7 @@ Partial Class laporan
         '
         Me.PictureBox10.Image = Global.FinalPorject.My.Resources.Resources.trolley
         Me.PictureBox10.Location = New System.Drawing.Point(14, 301)
-        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -306,7 +306,7 @@ Partial Class laporan
         '
         Me.PictureBox11.Image = Global.FinalPorject.My.Resources.Resources.cash_flow
         Me.PictureBox11.Location = New System.Drawing.Point(14, 348)
-        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -317,7 +317,7 @@ Partial Class laporan
         '
         Me.PictureBox9.Image = Global.FinalPorject.My.Resources.Resources.pay
         Me.PictureBox9.Location = New System.Drawing.Point(14, 254)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -329,7 +329,7 @@ Partial Class laporan
         Me.btnLaporan.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLaporan.ForeColor = System.Drawing.SystemColors.Control
         Me.btnLaporan.Location = New System.Drawing.Point(-4, 341)
-        Me.btnLaporan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLaporan.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLaporan.Name = "btnLaporan"
         Me.btnLaporan.Size = New System.Drawing.Size(242, 50)
         Me.btnLaporan.TabIndex = 84
@@ -341,7 +341,7 @@ Partial Class laporan
         Me.btnStok.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStok.ForeColor = System.Drawing.SystemColors.Control
         Me.btnStok.Location = New System.Drawing.Point(-4, 296)
-        Me.btnStok.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnStok.Margin = New System.Windows.Forms.Padding(2)
         Me.btnStok.Name = "btnStok"
         Me.btnStok.Size = New System.Drawing.Size(242, 50)
         Me.btnStok.TabIndex = 82
@@ -353,7 +353,7 @@ Partial Class laporan
         Me.btnTransaksi.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTransaksi.ForeColor = System.Drawing.SystemColors.Control
         Me.btnTransaksi.Location = New System.Drawing.Point(-4, 250)
-        Me.btnTransaksi.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnTransaksi.Margin = New System.Windows.Forms.Padding(2)
         Me.btnTransaksi.Name = "btnTransaksi"
         Me.btnTransaksi.Size = New System.Drawing.Size(242, 50)
         Me.btnTransaksi.TabIndex = 83
@@ -365,7 +365,7 @@ Partial Class laporan
         Me.PictureBox13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.PictureBox13.Image = Global.FinalPorject.My.Resources.Resources.logout__1_
         Me.PictureBox13.Location = New System.Drawing.Point(8, 490)
-        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox13.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(44, 38)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -402,7 +402,7 @@ Partial Class laporan
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = Global.FinalPorject.My.Resources.Resources._60111
         Me.PictureBox1.Location = New System.Drawing.Point(8, 9)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(89, 86)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -414,7 +414,7 @@ Partial Class laporan
         Me.btnLogout.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.Control
         Me.btnLogout.Location = New System.Drawing.Point(-4, 483)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(242, 50)
         Me.btnLogout.TabIndex = 86
@@ -425,7 +425,7 @@ Partial Class laporan
         '
         Me.PictureBox8.Image = Global.FinalPorject.My.Resources.Resources.gadgets
         Me.PictureBox8.Location = New System.Drawing.Point(12, 209)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(39, 38)
         Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -437,7 +437,7 @@ Partial Class laporan
         Me.btnProduk.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnProduk.ForeColor = System.Drawing.SystemColors.Control
         Me.btnProduk.Location = New System.Drawing.Point(-4, 205)
-        Me.btnProduk.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnProduk.Margin = New System.Windows.Forms.Padding(2)
         Me.btnProduk.Name = "btnProduk"
         Me.btnProduk.Size = New System.Drawing.Size(242, 50)
         Me.btnProduk.TabIndex = 81
@@ -461,9 +461,10 @@ Partial Class laporan
         Me.ClientSize = New System.Drawing.Size(906, 531)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "laporan"
         Me.Text = "Form1"
+        Me.TopMost = True
         Me.TabControl2.ResumeLayout(False)
         Me.TabPagePenjualan.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

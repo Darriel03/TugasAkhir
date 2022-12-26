@@ -3,6 +3,7 @@ Public Class Transaksi
     Private Sub clear()
         TextBox1.Text = 0
         TextBox14.Text = 0
+
     End Sub
 
     Private Sub tampilBrg()
@@ -32,6 +33,26 @@ SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) 
         End If
     End Sub
 
+    Private Sub tampilBrgUpdate()
+        Call koneksi()
+        adr = New MySqlDataAdapter("SELECT a.kodebarang, b.namabarang, b.merekbarang, b.hargajual, SUM(a.qtystok) as stok FROM tblstokdetail a 
+JOIN tblbarang b ON a.kodebarang = b.kodebarang WHERE b.kodebarang NOT IN (SELECT kodebarang FROM tbltransaksidetail)
+UNION ALL
+SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) as Stok
+     FROM ( 
+    (SELECT SUM(qtystok) as stok,kodebarang FROM tblstokdetail GROUP BY kodebarang) as stok
+       INNER JOIN 
+    (SELECT SUM(qtypenjualan) as jual,kodebarang FROM tbltransaksidetail GROUP BY kodebarang) as jual 
+     ON stok.kodebarang = jual.kodebarang) JOIN tblbarang b ON stok.kodebarang = b.kodebarang;", conn)
+        adt = New DataSet
+        adr.Fill(adt, "tblstokdetail")
+        dgvListBarang.DataSource = adt.Tables("tblstokdetail")
+        dgvListBarang.AllowUserToAddRows = False
+        If dgvListBarang(0, 0).Value Is Nothing Then
+            dgvListBarang.Rows.Remove(dgvListBarang.Rows(0))
+        End If
+    End Sub
+
     Sub auto()
         Call koneksi()
         cmd = New MySqlCommand("select idtransaksi from tbltransaksi order by idtransaksi desc", conn)
@@ -44,9 +65,9 @@ SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) 
             If Len(TextBox6.Text) = 1 Then
                 TextBox6.Text = "PJ000" & TextBox6.Text & ""
             ElseIf Len(TextBox6.Text) = 2 Then
-                TextBox6.Text = "FJ00" & TextBox6.Text & ""
+                TextBox6.Text = "PJ00" & TextBox6.Text & ""
             ElseIf Len(TextBox6.Text) = 3 Then
-                TextBox6.Text = "FJ0" & TextBox6.Text & ""
+                TextBox6.Text = "PJ0" & TextBox6.Text & ""
             End If
         End If
 
@@ -73,8 +94,9 @@ SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) 
     Private Sub Transaksi_Load(sender As Object, e As EventArgs) Handles Me.Load
         Call auto()
         Call koneksi()
-        Call tampilBrg()
         Call clear()
+        Call tampilBrg()
+
     End Sub
 
 
@@ -206,7 +228,39 @@ SELECT stok.kodebarang, b.namabarang, b.merekbarang, b.hargajual, (stok - jual) 
         Call hitungTotal()
         Call auto()
         Call clear()
-        Call tampilBrg()
+        Call tampilBrgUpdate()
+    End Sub
 
+    Private Sub btnUtama_Click(sender As Object, e As EventArgs) Handles btnUtama.Click
+        Utama.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Btn_Click(sender As Object, e As EventArgs) Handles Btn.Click
+        Produk.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Button1.Enabled = False
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        stokBarang.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim result As Integer = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim result As Integer = MessageBox.Show("Apakah Anda yakin ingin logout?", "Konfirmasi Logout", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 End Class

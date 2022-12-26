@@ -42,7 +42,7 @@ Partial Class Transaksi
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Btn = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
+        Me.btnUtama = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -172,7 +172,7 @@ Partial Class Transaksi
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.CadetBlue
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(82, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.Panel2.Controls.Add(Me.PictureBox12)
         Me.Panel2.Controls.Add(Me.PictureBox8)
         Me.Panel2.Controls.Add(Me.PictureBox10)
@@ -182,7 +182,7 @@ Partial Class Transaksi
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Btn)
-        Me.Panel2.Controls.Add(Me.Button17)
+        Me.Panel2.Controls.Add(Me.btnUtama)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.PictureBox1)
@@ -298,17 +298,17 @@ Partial Class Transaksi
         Me.Btn.Text = "Data Produk"
         Me.Btn.UseVisualStyleBackColor = False
         '
-        'Button17
+        'btnUtama
         '
-        Me.Button17.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button17.ForeColor = System.Drawing.SystemColors.Control
-        Me.Button17.Location = New System.Drawing.Point(-4, 150)
-        Me.Button17.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(231, 50)
-        Me.Button17.TabIndex = 75
-        Me.Button17.Text = "Menu Utama"
-        Me.Button17.UseVisualStyleBackColor = False
+        Me.btnUtama.Font = New System.Drawing.Font("Constantia", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUtama.ForeColor = System.Drawing.SystemColors.Control
+        Me.btnUtama.Location = New System.Drawing.Point(-4, 150)
+        Me.btnUtama.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnUtama.Name = "btnUtama"
+        Me.btnUtama.Size = New System.Drawing.Size(231, 50)
+        Me.btnUtama.TabIndex = 75
+        Me.btnUtama.Text = "Menu Utama"
+        Me.btnUtama.UseVisualStyleBackColor = False
         '
         'Label3
         '
@@ -532,7 +532,7 @@ Partial Class Transaksi
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Btn As Button
-    Friend WithEvents Button17 As Button
+    Friend WithEvents btnUtama As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
